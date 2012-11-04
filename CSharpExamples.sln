@@ -4,6 +4,8 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # SharpDevelop 4.2.2.8818
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BackgroundWorkerExamples", "BackgroundWorkerExamples\BackgroundWorkerExamples.csproj", "{81CFCC95-3CE0-45AA-97B6-19E0A8080556}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DinamicCreatingControls", "DinamicCreatingControls\DinamicCreatingControls.csproj", "{73872079-E64D-4F4C-92A3-FED637CCF989}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -14,5 +16,9 @@ Global
 		{81CFCC95-3CE0-45AA-97B6-19E0A8080556}.Debug|x86.ActiveCfg = Debug|x86
 		{81CFCC95-3CE0-45AA-97B6-19E0A8080556}.Release|x86.Build.0 = Release|x86
 		{81CFCC95-3CE0-45AA-97B6-19E0A8080556}.Release|x86.ActiveCfg = Release|x86
+		{73872079-E64D-4F4C-92A3-FED637CCF989}.Debug|x86.Build.0 = Debug|x86
+		{73872079-E64D-4F4C-92A3-FED637CCF989}.Debug|x86.ActiveCfg = Debug|x86
+		{73872079-E64D-4F4C-92A3-FED637CCF989}.Release|x86.Build.0 = Release|x86
+		{73872079-E64D-4F4C-92A3-FED637CCF989}.Release|x86.ActiveCfg = Release|x86
 	EndGlobalSection
 EndGlobal
