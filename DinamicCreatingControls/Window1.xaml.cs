@@ -25,25 +25,27 @@ namespace DinamicCreatingControls
 		{
 			InitializeComponent();
 			
-			CreateButtonArray(this.wrpPanel1);
+			CreateButtonArray(this.wrpPanel1, new RoutedEventHandler(btn_Click));
+			CreateButtonArray(this.wrpPanel2, new RoutedEventHandler(btn2_Click));
+			CreateButtonArray(this.wrpPanel3, new RoutedEventHandler(btn3_Click));
 		}
 		
 		/// <summary>
 		/// Dynamic creating components in WrapPanel.
 		/// </summary>
 		/// <param name="pnl"></param>
-		public void CreateButtonArray(WrapPanel pnl)
+		public void CreateButtonArray(WrapPanel pnl, RoutedEventHandler routedEventHandler)
 		{
 			Button btn = null;
 			
-			for (int i=0; i<10; i++)
+			for (int i=0; i<30; i++)
 			{
 				btn = new Button();
 				btn.Content = "button" + i.ToString();
 				btn.Width = 100;
 				btn.Height = 23;
 				btn.Margin = new Thickness(5,5,5,5);
-				btn.Click += new RoutedEventHandler(btn_Click);
+				btn.Click += routedEventHandler;
 				pnl.Children.Add(btn);
 			}
 		}
@@ -51,7 +53,22 @@ namespace DinamicCreatingControls
 		void btn_Click(object sender, RoutedEventArgs e)
 		{
 			Button btn = sender as Button;
-			MessageBox.Show("Нажата кнопка " + btn.Content.ToString(), this.Title, MessageBoxButton.OK, MessageBoxImage.Information);
+			this.txbBox1.AppendText(DateTime.Now.ToString() + " Нажата кнопка " + btn.Content.ToString() + "\r\n");
+			this.txbBox1.ScrollToEnd();
+		}
+		
+		void btn2_Click(object sender, RoutedEventArgs e)
+		{
+			Button btn = sender as Button;
+			this.txbBox1.AppendText(DateTime.Now.ToString() + " Нажата кнопка " + btn.Content.ToString() + "\r\n");
+			this.txbBox1.ScrollToEnd();
+		}
+		
+		void btn3_Click(object sender, RoutedEventArgs e)
+		{
+			Button btn = sender as Button;
+			this.txbBox1.AppendText(DateTime.Now.ToString() + " Нажата кнопка " + btn.Content.ToString() + "\r\n");
+			this.txbBox1.ScrollToEnd();
 		}
 	}
 }
