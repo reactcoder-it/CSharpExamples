@@ -43,8 +43,15 @@ namespace DinamicCreatingControls
 				btn.Width = 100;
 				btn.Height = 23;
 				btn.Margin = new Thickness(5,5,5,5);
+				btn.Click += new RoutedEventHandler(btn_Click);
 				pnl.Children.Add(btn);
 			}
+		}
+
+		void btn_Click(object sender, RoutedEventArgs e)
+		{
+			Button btn = sender as Button;
+			MessageBox.Show("Нажата кнопка " + btn.Content.ToString(), this.Title, MessageBoxButton.OK, MessageBoxImage.Information);
 		}
 	}
 }
