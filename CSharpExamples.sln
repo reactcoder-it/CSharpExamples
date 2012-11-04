@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BackgroundWorkerExamples", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DinamicCreatingControls", "DinamicCreatingControls\DinamicCreatingControls.csproj", "{73872079-E64D-4F4C-92A3-FED637CCF989}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Layouting", "Layouting\Layouting.csproj", "{5CC0EB6E-24A7-4CE4-A8D8-FE4D56BE38C1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -20,5 +22,9 @@ Global
 		{73872079-E64D-4F4C-92A3-FED637CCF989}.Debug|x86.ActiveCfg = Debug|x86
 		{73872079-E64D-4F4C-92A3-FED637CCF989}.Release|x86.Build.0 = Release|x86
 		{73872079-E64D-4F4C-92A3-FED637CCF989}.Release|x86.ActiveCfg = Release|x86
+		{5CC0EB6E-24A7-4CE4-A8D8-FE4D56BE38C1}.Debug|x86.Build.0 = Debug|x86
+		{5CC0EB6E-24A7-4CE4-A8D8-FE4D56BE38C1}.Debug|x86.ActiveCfg = Debug|x86
+		{5CC0EB6E-24A7-4CE4-A8D8-FE4D56BE38C1}.Release|x86.Build.0 = Release|x86
+		{5CC0EB6E-24A7-4CE4-A8D8-FE4D56BE38C1}.Release|x86.ActiveCfg = Release|x86
 	EndGlobalSection
 EndGlobal
