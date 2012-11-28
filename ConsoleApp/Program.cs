@@ -10,8 +10,15 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp
 {
+	/// <summary>
+	/// Главный класс программы, в нем находится метод Main().
+	/// </summary>
 	class Program
 	{
+		/// <summary>
+		/// Точка входа в программу.
+		/// </summary>
+		/// <param name="args">Аргументы</param>
 		public static void Main(string[] args)
 		{
 			Action<object> action = (object obj) =>
