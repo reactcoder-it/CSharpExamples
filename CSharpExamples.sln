@@ -10,6 +10,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Layouting", "Layouting\Layo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp", "ConsoleApp\ConsoleApp.csproj", "{92D45BC1-D078-4F84-9085-FCE131E8227A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Styling", "Styling\Styling.csproj", "{8121E734-AEA3-4F26-B898-375FACD262CD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -32,5 +34,9 @@ Global
 		{92D45BC1-D078-4F84-9085-FCE131E8227A}.Debug|x86.ActiveCfg = Debug|x86
 		{92D45BC1-D078-4F84-9085-FCE131E8227A}.Release|x86.Build.0 = Release|x86
 		{92D45BC1-D078-4F84-9085-FCE131E8227A}.Release|x86.ActiveCfg = Release|x86
+		{8121E734-AEA3-4F26-B898-375FACD262CD}.Debug|x86.Build.0 = Debug|x86
+		{8121E734-AEA3-4F26-B898-375FACD262CD}.Debug|x86.ActiveCfg = Debug|x86
+		{8121E734-AEA3-4F26-B898-375FACD262CD}.Release|x86.Build.0 = Release|x86
+		{8121E734-AEA3-4F26-B898-375FACD262CD}.Release|x86.ActiveCfg = Release|x86
 	EndGlobalSection
 EndGlobal
