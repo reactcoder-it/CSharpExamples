@@ -20,7 +20,7 @@
 	
 		<Grid Grid.Row="0" x:Name="header" Background="Transparent">
 			
-			<TextBlock TextWrapping="Wrap" VerticalAlignment="Top" FontWeight="Bold" FontSize="10.667" Margin="30,10,0,0"><Run Text="STYLING" /></TextBlock>
+			<!--<TextBlock TextWrapping="Wrap" VerticalAlignment="Top" FontWeight="Bold" FontSize="10.667" Margin="30,10,0,0"><Run Text="STYLING" /></TextBlock>-->
 			
 			<WrapPanel UseLayoutRounding="False" HorizontalAlignment="Left" VerticalAlignment="Top" Orientation="Horizontal" Margin="30,9,0,0">
 				<Button x:Name="ShowNew" Content="new"></Button>
@@ -95,7 +95,7 @@
 		<ContentControl x:Name="MDI" Margin="10,0" Grid.Row="1" />
 		<Rectangle x:Name="settingsShadow" Fill="#3F000000" Stroke="Black" StrokeThickness="0" Visibility="Collapsed" Grid.RowSpan="2" />
 		
-		<Grid x:Name="searchPanel" Grid.Row="2">
+		<!--<Grid x:Name="searchPanel" Grid.Row="2">
 			<Border Background="#F0F0F0" BorderBrush="#999999" BorderThickness="1" CornerRadius="0" Padding="3,2,3,2" Margin="0">
 				<DockPanel Margin="2">
 					<Button Content="Find prev" Width="75" DockPanel.Dock="Right" Margin="5,0,0,0" ToolTip="SHIFT + F3">
@@ -106,6 +106,6 @@
 					</ToggleButton>
 				</DockPanel>
 			</Border>
-		</Grid>
+		</Grid>-->
 	</Grid>
 </Window>
