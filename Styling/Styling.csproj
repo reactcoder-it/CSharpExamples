@@ -71,10 +71,16 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Include="Styles\Colours.xaml" />
+    <Page Include="Styles\Controls.Buttons.xaml" />
+    <Page Include="Styles\Controls.xaml" />
     <Page Include="Window1.xaml" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Styles" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.Targets" />
 </Project>
