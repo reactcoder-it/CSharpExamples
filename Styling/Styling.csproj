@@ -73,6 +73,7 @@
   <ItemGroup>
     <Page Include="Styles\Colours.xaml" />
     <Page Include="Styles\Controls.Buttons.xaml" />
+    <Page Include="Styles\Controls.ListBox.xaml" />
     <Page Include="Styles\Controls.xaml" />
     <Page Include="Window1.xaml" />
   </ItemGroup>
