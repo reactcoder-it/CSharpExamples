@@ -48,6 +48,15 @@
 							</MultiTrigger.Setters>
 						</MultiTrigger>
 						<MultiTrigger>
+							<MultiTrigger.Conditions>
+								<Condition Property="IsSelected" Value="True" />
+                                <Condition Property="Selector.IsSelectionActive" Value="True" />
+							</MultiTrigger.Conditions>
+							<Setter TargetName="Border" Property="Background">
+                                <Setter.Value>
+                                    <SolidColorBrush Color="{DynamicResource AccentColor2}" />
+                                </Setter.Value>
+                            </Setter>
 						</MultiTrigger>
 					</ControlTemplate.Triggers>
 				</ControlTemplate>

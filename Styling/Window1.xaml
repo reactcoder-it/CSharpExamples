@@ -121,5 +121,11 @@
 				</DockPanel>
 			</Border>
 		</Grid>-->
+		<Grid x:Name="lst" Grid.Row="1">
+			<ListBox>
+				<ListBoxItem>sdjkfhkdsjf</ListBoxItem>
+				<ListBoxItem>sdjkfhkdsjf</ListBoxItem>
+			</ListBox>
+		</Grid>
 	</Grid>
 </Window>

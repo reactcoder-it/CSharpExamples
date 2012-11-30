@@ -3,6 +3,7 @@
 
 	<ResourceDictionary.MergedDictionaries>
 		<ResourceDictionary Source="Controls.Buttons.xaml" />
+		<ResourceDictionary Source="Controls.ListBox.xaml" />
 	</ResourceDictionary.MergedDictionaries>
 
 	<Style TargetType="Button" BasedOn="{StaticResource ChromelessButtonStyle}" />

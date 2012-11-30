@@ -7,6 +7,8 @@
 	<!-- Theme Base Colors -->
 	
 	<!-- ACCENT COLORS -->
+	<!--60%-->
+    <Color x:Key="AccentColor2">#99119EDA</Color>
 	<!-- 40% -->
     <Color x:Key="AccentColor3">#66119EDA</Color>
 
