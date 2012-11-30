@@ -121,10 +121,14 @@
 				</DockPanel>
 			</Border>
 		</Grid>-->
-		<Grid x:Name="lst" Grid.Row="1">
-			<ListBox>
-				<ListBoxItem>sdjkfhkdsjf</ListBoxItem>
-				<ListBoxItem>sdjkfhkdsjf</ListBoxItem>
+		<Grid x:Name="lst" Grid.Row="1" Margin="3">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="140" />
+				<ColumnDefinition Width="*" />
+			</Grid.ColumnDefinitions>
+			<ListBox Grid.Column="0">
+				<ListBoxItem>2342345455</ListBoxItem>
+				<ListBoxItem>1234343123</ListBoxItem>
 			</ListBox>
 		</Grid>
 	</Grid>
