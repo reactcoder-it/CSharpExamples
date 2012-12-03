@@ -77,6 +77,7 @@
     <Page Include="Styles\Controls.Buttons.xaml" />
     <Page Include="Styles\Controls.DeviceListBoxItem.xaml" />
     <Page Include="Styles\Controls.ListBox.xaml" />
+    <Page Include="Styles\Controls.Tile.xaml" />
     <Page Include="Styles\Controls.xaml" />
     <Page Include="Window1.xaml" />
   </ItemGroup>
