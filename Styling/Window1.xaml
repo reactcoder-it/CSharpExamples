@@ -4,6 +4,15 @@
 	xmlns:Controls="clr-namespace:Styling.Controls"
 	Title="Styling">
 	
+	<Window.Resources>
+		<ResourceDictionary>
+			<ResourceDictionary.MergedDictionaries>
+				<ResourceDictionary Source="./Styles/Colours.xaml" />
+				<ResourceDictionary Source="./Styles/Controls.xaml" />
+			</ResourceDictionary.MergedDictionaries>
+		</ResourceDictionary>
+	</Window.Resources>
+	
 	<Window.Background>
 		<LinearGradientBrush MappingMode="Absolute" StartPoint="0,0" EndPoint="0,150">
 			<GradientStop Color="#FFDEDEDE" />
@@ -113,6 +122,7 @@
 				<Controls:DeviceListBoxItem Number="234234254">Проверка завершена</Controls:DeviceListBoxItem>
 				<Controls:DeviceListBoxItem Number="234234254">Проверка завершена</Controls:DeviceListBoxItem>
 				<Controls:DeviceListBoxItem Number="234234254">Проверка завершена</Controls:DeviceListBoxItem>
+				<Controls:Tile Title="Temperature" Value="45" />
 			</ListBox>
 		</Grid>
 	</Grid>
