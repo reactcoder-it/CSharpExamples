@@ -1,0 +1,28 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+	
+	<!-- From the cosmopolitan theme pack -->
+	<!-- ***** COLORS START ***** -->
+	
+	<!-- Theme Base Colors -->
+	
+	<!-- ACCENT COLORS -->
+	<!--60%-->
+    <Color x:Key="AccentColor2">#99119EDA</Color>
+	<!-- 40% -->
+    <Color x:Key="AccentColor3">#66119EDA</Color>
+
+	<!-- BASE COLORS -->
+	<Color x:Key="TransparentWhiteColor">#00FFFFFF</Color>
+    <Color x:Key="Gray5">#FFD8D8D9</Color>
+    <Color x:Key="WhiteColor">#FFFFFFFF</Color>
+
+	<!-- ***** BRUSHES START ***** -->
+	<!-- PROJECT TEMPLATE BRUSHES -->
+	
+	<!-- UNIVERSAL CONTROL BRUSHES -->
+	<SolidColorBrush x:Key="TransparentWhiteBrush" Color="{DynamicResource TransparentWhiteColor}" />
+    <SolidColorBrush x:Key="GrayBrush5" Color="{DynamicResource Gray5}"/>
+    <SolidColorBrush x:Key="WhiteBrush" Color="{DynamicResource WhiteColor}" />
+
+</ResourceDictionary>

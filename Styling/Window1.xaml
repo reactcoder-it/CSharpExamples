@@ -1,0 +1,135 @@
+﻿<Window x:Class="Styling.Window1"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	Title="Styling">
+	
+	<Window.Resources>
+		<ResourceDictionary>
+			<ResourceDictionary.MergedDictionaries>
+				<ResourceDictionary Source="./Styles/Colours.xaml" />
+				<ResourceDictionary Source="./Styles/Controls.xaml" />
+			</ResourceDictionary.MergedDictionaries>
+		</ResourceDictionary>
+	</Window.Resources>
+	
+	<Window.Background>
+		<LinearGradientBrush MappingMode="Absolute" StartPoint="0,0" EndPoint="0,150">
+			<GradientStop Color="#FFDEDEDE" />
+			<GradientStop Color="White" Offset="1" />
+		</LinearGradientBrush>
+	</Window.Background>
+	
+	<Grid Margin="0" ShowGridLines="False">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto" MinHeight="58" />
+			<RowDefinition />
+			<RowDefinition Height="Auto" />
+			<RowDefinition Height="20" />
+		</Grid.RowDefinitions>
+	
+		<Grid Grid.Row="0" x:Name="header" Background="Transparent">
+			
+			<!--<TextBlock TextWrapping="Wrap" VerticalAlignment="Top" FontWeight="Bold" FontSize="10.667" Margin="30,10,0,0"><Run Text="STYLING" /></TextBlock>-->
+			
+			<WrapPanel UseLayoutRounding="False" HorizontalAlignment="Left" VerticalAlignment="Top" Orientation="Horizontal" Margin="30,9,0,0">
+				<Button x:Name="ShowNew" Content="СОЗДАТЬ"></Button>
+				<TextBlock Margin="5,0"><Run Text="|" /></TextBlock>
+				<Button x:Name="ShowOpen" Content="ОТКРЫТЬ"></Button>
+				<TextBlock Margin="5,0"><Run Text="|" /></TextBlock>
+				<Button x:Name="ShowSave" Content="СОХРАНИТЬ"></Button>
+				<TextBlock Margin="5,0"><Run Text="|" /></TextBlock>
+				<Button x:Name="PrintDocument" Content="ПЕЧАТЬ"></Button>
+				<TextBlock Margin="5,0"><Run Text="|" /></TextBlock>
+				<Button x:Name="PublishDocument" Content="ОПУБЛИКОВАТЬ"></Button>
+			</WrapPanel>
+			
+			<WrapPanel x:Name="newItems" Margin="30,0,0,0" Opacity="0.995" VerticalAlignment="Bottom" Height="20" RenderTransformOrigin="0.5,0.5">
+				<WrapPanel.RenderTransform>
+					<TransformGroup>
+						<ScaleTransform />
+						<SkewTransform />
+						<RotateTransform />
+						<TranslateTransform />
+					</TransformGroup>
+				</WrapPanel.RenderTransform>
+				<Button x:Name="NewDocument" Content="НОВЫЙ ФАЙЛ" />
+				<TextBlock Margin="5,0"><Run Text="|" /></TextBlock>
+				<Button x:Name="NewJekyllDocument" Content="JEKYLL PAGE" />
+				<WrapPanel x:Name="CreateNewPageHook" Margin="0,0,0,0" />
+			</WrapPanel>
+
+			<WrapPanel x:Name="saveItems" Visibility="Collapsed" Opacity="0" Margin="30,0,0,0" VerticalAlignment="Bottom" Height="20" RenderTransformOrigin="0.5,0.5">
+				<WrapPanel.RenderTransform>
+					<TransformGroup>
+						<ScaleTransform />
+						<SkewTransform />
+						<RotateTransform />
+						<TranslateTransform />
+					</TransformGroup>
+				</WrapPanel.RenderTransform>
+			
+				<Button x:Name="SaveDocument" Content="SAVE" />
+				<Button x:Name="SaveAsDocument" Content="SAVE AS" />
+				<Button x:Name="SaveAllDocuments" Content="SAVE ALL" />
+				<WrapPanel x:Name="SavePageHook" Margin="0,0,0,0" />
+			</WrapPanel>
+		
+			<WrapPanel x:Name="openItems" Visibility="Collapsed" Opacity="0" Margin="30,0,0,0" VerticalAlignment="Bottom" Height="20" RenderTransformOrigin="0.5,0.5">
+				<WrapPanel.RenderTransform>
+					<TransformGroup>
+						<ScaleTransform />
+						<SkewTransform />
+						<RotateTransform />
+						<TranslateTransform X="-50" />
+					</TransformGroup>
+				</WrapPanel.RenderTransform>
+				<Button x:Name="OpenDocument" Content="OPEN" />
+				<Button x:Name="OpenFromWeb" Content="OPEN FROM WEB" />
+			</WrapPanel>
+		
+			<StackPanel HorizontalAlignment="Right" VerticalAlignment="Top" Margin="10" Orientation="Horizontal">
+				<ContentControl x:Name="Updater" />
+				<Button Content="НАСТРОЙКИ" FontSize="10.667" FontWeight="Bold">
+				</Button>
+				<TextBlock Margin="10,0"><Run Text="|" /></TextBlock>
+				<Button Content="ПОМОЩЬ" FontSize="10.667" FontWeight="Bold" Margin="0,0,20,0">
+				</Button>
+				<Button Content="0" FontFamily="Marlett" />
+				<Button x:Name="maxRestore" Content="1" FontFamily="Marlett" />
+				<Button x:Name="TryClose" Content="r" FontFamily="Marlett" />
+			</StackPanel>
+
+			<Rectangle HorizontalAlignment="Left" Stroke="Black" Width="10" StrokeThickness="0" Margin="0,10,0,0">
+				<Rectangle.Fill>
+					<SolidColorBrush Color="DarkGreen" />
+				</Rectangle.Fill>
+			</Rectangle>
+		</Grid>
+	
+		<ContentControl x:Name="MDI" Margin="10,0" Grid.Row="1" />
+		<Rectangle x:Name="settingsShadow" Fill="#3F000000" Stroke="Black" StrokeThickness="0" Visibility="Collapsed" Grid.RowSpan="2" />
+		
+		<!--<Grid x:Name="searchPanel" Grid.Row="2">
+			<Border Background="#F0F0F0" BorderBrush="#999999" BorderThickness="1" CornerRadius="0" Padding="3,2,3,2" Margin="0">
+				<DockPanel Margin="2">
+					<Button Content="Find prev" Width="75" DockPanel.Dock="Right" Margin="5,0,0,0" ToolTip="SHIFT + F3">
+					</Button>
+					<Button Content="Find" Width="75" DockPanel.Dock="Right" Margin="5,0,0,0" ToolTip="F3">
+					</Button>
+					<ToggleButton Content=".*" Width="30" ToolTip="Regular expressions">
+					</ToggleButton>
+				</DockPanel>
+			</Border>
+		</Grid>-->
+		<Grid x:Name="lst" Grid.Row="1" Margin="3">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="140" />
+				<ColumnDefinition Width="*" />
+			</Grid.ColumnDefinitions>
+			<ListBox Grid.Column="0">
+				<ListBoxItem>2342345455</ListBoxItem>
+				<ListBoxItem>1234343123</ListBoxItem>
+			</ListBox>
+		</Grid>
+	</Grid>
+</Window>
