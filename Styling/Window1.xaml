@@ -122,7 +122,13 @@
 				<Controls:DeviceListBoxItem Number="234234254">Проверка завершена</Controls:DeviceListBoxItem>
 				<Controls:DeviceListBoxItem Number="234234254">Проверка завершена</Controls:DeviceListBoxItem>
 				<Controls:DeviceListBoxItem Number="234234254">Проверка завершена</Controls:DeviceListBoxItem>
-				<Controls:Tile Title="Temperature" Value="45" />
+				<WrapPanel>
+					<Controls:Tile Title="Temperature" Value="45" />
+					<Controls:Tile Title="Temperature" Value="45" />
+					<Controls:Tile Title="Temperature" Value="45" />
+					<Controls:Tile Title="Temperature" Value="45" />
+					<Controls:Tile Title="Temperature" Value="45" />
+				</WrapPanel>
 			</ListBox>
 		</Grid>
 	</Grid>
