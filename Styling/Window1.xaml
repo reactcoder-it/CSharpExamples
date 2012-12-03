@@ -4,12 +4,7 @@
 	Title="Styling">
 	
 	<Window.Resources>
-		<ResourceDictionary>
-			<ResourceDictionary.MergedDictionaries>
-				<ResourceDictionary Source="./Styles/Colours.xaml" />
-				<ResourceDictionary Source="./Styles/Controls.xaml" />
-			</ResourceDictionary.MergedDictionaries>
-		</ResourceDictionary>
+		
 	</Window.Resources>
 	
 	<Window.Background>
@@ -109,18 +104,6 @@
 		<ContentControl x:Name="MDI" Margin="10,0" Grid.Row="1" />
 		<Rectangle x:Name="settingsShadow" Fill="#3F000000" Stroke="Black" StrokeThickness="0" Visibility="Collapsed" Grid.RowSpan="2" />
 		
-		<!--<Grid x:Name="searchPanel" Grid.Row="2">
-			<Border Background="#F0F0F0" BorderBrush="#999999" BorderThickness="1" CornerRadius="0" Padding="3,2,3,2" Margin="0">
-				<DockPanel Margin="2">
-					<Button Content="Find prev" Width="75" DockPanel.Dock="Right" Margin="5,0,0,0" ToolTip="SHIFT + F3">
-					</Button>
-					<Button Content="Find" Width="75" DockPanel.Dock="Right" Margin="5,0,0,0" ToolTip="F3">
-					</Button>
-					<ToggleButton Content=".*" Width="30" ToolTip="Regular expressions">
-					</ToggleButton>
-				</DockPanel>
-			</Border>
-		</Grid>-->
 		<Grid x:Name="lst" Grid.Row="1" Margin="3">
 			<Grid.ColumnDefinitions>
 				<ColumnDefinition Width="140" />
@@ -129,6 +112,11 @@
 			<ListBox Grid.Column="0">
 				<ListBoxItem>2342345455</ListBoxItem>
 				<ListBoxItem>1234343123</ListBoxItem>
+			</ListBox>
+			<ListBox Grid.Column="1">
+				<ListBoxItem>2342345455</ListBoxItem>
+				<ListBoxItem>1234343123</ListBoxItem>
+				<ListBoxItem><ToggleButton>OK</ToggleButton></ListBoxItem>
 			</ListBox>
 		</Grid>
 	</Grid>
