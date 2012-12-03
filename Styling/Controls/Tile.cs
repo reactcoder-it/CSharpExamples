@@ -27,5 +27,13 @@ namespace Styling.Controls
 			get { return (string)GetValue(TitleProperty); }
 			set { SetValue(TitleProperty, value); }
 		}
+		
+		public static readonly DependencyProperty CountProperty = DependencyProperty.Register("Count", typeof(string), typeof(Tile), new PropertyMetadata(default(string)));
+		
+		public string Count
+		{
+			get { return (string)GetValue(CountProperty); }
+			set { SetValue(CountProperty, value); }
+		}
 	}
 }
