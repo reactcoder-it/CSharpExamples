@@ -28,12 +28,12 @@ namespace Styling.Controls
 			set { SetValue(TitleProperty, value); }
 		}
 		
-		public static readonly DependencyProperty CountProperty = DependencyProperty.Register("Count", typeof(string), typeof(Tile), new PropertyMetadata(default(string)));
+		public static readonly DependencyProperty ValueProperty = DependencyProperty.Register("Value", typeof(string), typeof(Tile), new PropertyMetadata(default(string)));
 		
-		public string Count
+		public string Value
 		{
-			get { return (string)GetValue(CountProperty); }
-			set { SetValue(CountProperty, value); }
+			get { return (string)GetValue(ValueProperty); }
+			set { SetValue(ValueProperty, value); }
 		}
 	}
 }
