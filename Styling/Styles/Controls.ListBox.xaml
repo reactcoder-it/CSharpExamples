@@ -20,9 +20,10 @@
 		<Setter Property="Template">
 			<Setter.Value>
 				<ControlTemplate TargetType="{x:Type ListBoxItem}">
-					<Border x:Name="Border" Background="{TemplateBinding Background}" SnapsToDevicePixels="True">
+					<StackPanel x:Name="Border" Background="{TemplateBinding Background}" SnapsToDevicePixels="True">
 						<ContentPresenter Margin="5,0,0,0" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
-					</Border>
+						<TextBlock Text="{TemplateBinding Content}" VerticalAlignment="Center" />
+					</StackPanel>
 					<ControlTemplate.Triggers>
 						<Trigger Property="IsSelected" Value="True">
 							<Setter TargetName="Border" Property="Background" Value="{DynamicResource AccentColorBrush}" />
