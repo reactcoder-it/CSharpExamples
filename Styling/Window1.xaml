@@ -3,10 +3,6 @@
 	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
 	Title="Styling">
 	
-	<Window.Resources>
-		
-	</Window.Resources>
-	
 	<Window.Background>
 		<LinearGradientBrush MappingMode="Absolute" StartPoint="0,0" EndPoint="0,150">
 			<GradientStop Color="#FFDEDEDE" />
@@ -23,8 +19,6 @@
 		</Grid.RowDefinitions>
 	
 		<Grid Grid.Row="0" x:Name="header" Background="Transparent">
-			
-			<!--<TextBlock TextWrapping="Wrap" VerticalAlignment="Top" FontWeight="Bold" FontSize="10.667" Margin="30,10,0,0"><Run Text="STYLING" /></TextBlock>-->
 			
 			<WrapPanel UseLayoutRounding="False" HorizontalAlignment="Left" VerticalAlignment="Top" Orientation="Horizontal" Margin="30,9,0,0">
 				<Button x:Name="ShowNew" Content="СОЗДАТЬ"></Button>
@@ -116,7 +110,6 @@
 			<ListBox Grid.Column="1">
 				<ListBoxItem>2342345455</ListBoxItem>
 				<ListBoxItem>1234343123</ListBoxItem>
-				<ListBoxItem><ToggleButton>OK</ToggleButton></ListBoxItem>
 			</ListBox>
 		</Grid>
 	</Grid>
