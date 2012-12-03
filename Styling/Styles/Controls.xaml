@@ -5,6 +5,7 @@
 		<ResourceDictionary Source="Controls.Buttons.xaml" />
 		<ResourceDictionary Source="Controls.ListBox.xaml" />
 		<ResourceDictionary Source="Controls.DeviceListBoxItem.xaml" />
+		<ResourceDictionary Source="Controls.Tile.xaml" />
 	</ResourceDictionary.MergedDictionaries>
 
 	<Style TargetType="Button" BasedOn="{StaticResource ChromelessButtonStyle}" />
