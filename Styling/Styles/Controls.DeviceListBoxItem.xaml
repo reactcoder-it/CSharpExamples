@@ -10,9 +10,45 @@
 			<Setter.Value>
 				<ControlTemplate TargetType="{x:Type Controls:DeviceListBoxItem}">
 					<StackPanel x:Name="Border" Background="{TemplateBinding Background}" SnapsToDevicePixels="True">
-						<TextBlock Text="{TemplateBinding Number}" FontSize="28" />
+						<TextBlock Text="{TemplateBinding Number}" FontSize="20" Margin="5,0,0,0" />
 						<ContentPresenter Margin="5,0,0,0" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
 					</StackPanel>
+					<ControlTemplate.Triggers>
+						<Trigger Property="IsSelected" Value="True">
+							<Setter TargetName="Border" Property="Background" Value="{DynamicResource AccentColorBrush}" />
+						</Trigger>
+						<Trigger Property="IsMouseOver" Value="True">
+							<Setter TargetName="Border" Property="Background">
+								<Setter.Value>
+									<SolidColorBrush Color="{DynamicResource AccentColor3}" />
+								</Setter.Value>
+							</Setter>
+						</Trigger>
+						<Trigger Property="IsEnabled" Value="False">
+							<Setter Property="Foreground" Value="{DynamicResource GrayBrush5}" />
+						</Trigger>
+						<MultiTrigger>
+							<MultiTrigger.Conditions>
+								<Condition Property="IsEnabled" Value="False" />
+								<Condition Property="IsSelected" Value="True" />
+							</MultiTrigger.Conditions>
+							<MultiTrigger.Setters>
+								<Setter TargetName="Border" Property="Background" Value="{DynamicResource GrayBrush5}" />
+								<Setter Property="Foreground" Value="{DynamicResource WhiteBrush}" />
+							</MultiTrigger.Setters>
+						</MultiTrigger>
+						<MultiTrigger>
+							<MultiTrigger.Conditions>
+								<Condition Property="IsSelected" Value="True" />
+                                <Condition Property="Selector.IsSelectionActive" Value="True" />
+							</MultiTrigger.Conditions>
+							<Setter TargetName="Border" Property="Background">
+                                <Setter.Value>
+                                    <SolidColorBrush Color="{DynamicResource AccentColor2}" />
+                                </Setter.Value>
+                            </Setter>
+						</MultiTrigger>
+					</ControlTemplate.Triggers>
 				</ControlTemplate>
 			</Setter.Value>
 		</Setter>
