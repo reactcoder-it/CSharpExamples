@@ -27,5 +27,10 @@ namespace XmlSpecificExample
 		{
 			InitializeComponent();
 		}
+		
+		void CmdAnswer_Click(object sender, RoutedEventArgs e)
+		{
+			throw new NotImplementedException();
+		}
 	}
 }
