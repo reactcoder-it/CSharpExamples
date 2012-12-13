@@ -16,6 +16,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XmlSpecificExample", "XmlSp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BubblingExample", "BubblingExample\BubblingExample.csproj", "{9780F253-501A-462A-8AB2-282229D4F7B9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MouseInputExample", "MouseInputExample\MouseInputExample.csproj", "{11BA8E8E-DF67-408C-A5AA-587D213DBA4F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -50,5 +52,9 @@ Global
 		{9780F253-501A-462A-8AB2-282229D4F7B9}.Debug|x86.ActiveCfg = Debug|x86
 		{9780F253-501A-462A-8AB2-282229D4F7B9}.Release|x86.Build.0 = Release|x86
 		{9780F253-501A-462A-8AB2-282229D4F7B9}.Release|x86.ActiveCfg = Release|x86
+		{11BA8E8E-DF67-408C-A5AA-587D213DBA4F}.Debug|x86.Build.0 = Debug|x86
+		{11BA8E8E-DF67-408C-A5AA-587D213DBA4F}.Debug|x86.ActiveCfg = Debug|x86
+		{11BA8E8E-DF67-408C-A5AA-587D213DBA4F}.Release|x86.Build.0 = Release|x86
+		{11BA8E8E-DF67-408C-A5AA-587D213DBA4F}.Release|x86.ActiveCfg = Release|x86
 	EndGlobalSection
 EndGlobal
