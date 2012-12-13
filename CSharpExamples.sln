@@ -14,6 +14,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Styling", "Styling\Styling.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XmlSpecificExample", "XmlSpecificExample\XmlSpecificExample.csproj", "{7FD046F9-14AF-4607-A6D8-354199029AF7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BubblingExample", "BubblingExample\BubblingExample.csproj", "{9780F253-501A-462A-8AB2-282229D4F7B9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -44,5 +46,9 @@ Global
 		{7FD046F9-14AF-4607-A6D8-354199029AF7}.Debug|x86.ActiveCfg = Debug|x86
 		{7FD046F9-14AF-4607-A6D8-354199029AF7}.Release|x86.Build.0 = Release|x86
 		{7FD046F9-14AF-4607-A6D8-354199029AF7}.Release|x86.ActiveCfg = Release|x86
+		{9780F253-501A-462A-8AB2-282229D4F7B9}.Debug|x86.Build.0 = Debug|x86
+		{9780F253-501A-462A-8AB2-282229D4F7B9}.Debug|x86.ActiveCfg = Debug|x86
+		{9780F253-501A-462A-8AB2-282229D4F7B9}.Release|x86.Build.0 = Release|x86
+		{9780F253-501A-462A-8AB2-282229D4F7B9}.Release|x86.ActiveCfg = Release|x86
 	EndGlobalSection
 EndGlobal

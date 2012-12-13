@@ -1,0 +1,33 @@
+﻿<Window x:Class="BubblingExample.Window1"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	Title="BubblingExample" Height="359" Width="329"
+	MouseUp="Something_MouseUp">
+	
+	<Grid Margin="3" MouseUp="Something_MouseUp">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto"></RowDefinition>
+			<RowDefinition Height="*"></RowDefinition>
+			<RowDefinition Height="Auto"></RowDefinition>
+			<RowDefinition Height="Auto"></RowDefinition>
+		</Grid.RowDefinitions>
+		
+		<Label Margin="5" Grid.Row="0" HorizontalAlignment="Left" Background="AliceBlue" BorderBrush="Black" BorderThickness="1" MouseUp="Something_MouseUp">
+			<StackPanel MouseUp="Something_MouseUp">
+				<TextBlock Margin="3" MouseUp="Something_MouseUp">
+					Image and picture label
+				</TextBlock>
+				<Image Source="happyface.jpg" Stretch="None" MouseUp="Something_MouseUp" />
+				<TextBlock Margin="3" MouseUp="Something_MouseUp">
+					Courtesy of the StackPanel
+				</TextBlock>
+			</StackPanel>
+		</Label>
+		<ListBox Grid.Row="1" Margin="5" Name="lstMessages"></ListBox>
+		<CheckBox Grid.Row="2" Margin="5" Name="chkHandle">
+			Handle first event
+		</CheckBox>
+		<Button Grid.Row="3" Margin="5" Padding="3" HorizontalAlignment="Right" Name="cmdClear" Click="CmdClear_Click">Clear List</Button>
+	</Grid>
+
+</Window>
