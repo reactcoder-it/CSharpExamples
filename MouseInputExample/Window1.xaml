@@ -1,0 +1,10 @@
+﻿<Window x:Class="MouseInputExample.Window1"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	Title="MouseInputExample" Height="300" Width="300"
+	>
+	<Grid>
+		<Canvas Background="Gray" Margin="5,5,5,25" MouseMove="Canvas_MouseMove"/>
+		<TextBlock VerticalAlignment="Bottom" Margin="5" Name="txtInfo" />
+	</Grid>
+</Window>
