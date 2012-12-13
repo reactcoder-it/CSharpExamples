@@ -1,0 +1,23 @@
+<Window x:Class="DragDropExample.Window1"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	Title="DragDropExample" Height="300" Width="300"
+	>
+	<Grid>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="*" />
+			<ColumnDefinition Width="*" />
+		</Grid.ColumnDefinitions>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="*" />
+			<RowDefinition Height="*" />
+		</Grid.RowDefinitions>
+		<Label Name="lblSource" Content="Dragged from lblSource" Grid.Column="0" Grid.Row="0"
+			HorizontalAlignment="Center" VerticalAlignment="Center" MouseDown="LblSource_MouseDown" />
+		<Label Name="lblSource2" Content="Dragged from lblSource2" Grid.Column="1" Grid.Row="0"
+			HorizontalAlignment="Center" VerticalAlignment="Center" MouseDown="LblSource_MouseDown" />
+		<Label Name="lblDestination" Content="To this label" Grid.Column="1" Grid.Row="1"
+			HorizontalAlignment="Center" VerticalAlignment="Center" AllowDrop="True" Drop="LblDestination_Drop"
+			DragEnter="LblDestination_DragEnter"	/>
+	</Grid>
+</Window>
