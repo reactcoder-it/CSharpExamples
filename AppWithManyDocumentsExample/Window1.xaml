@@ -1,0 +1,12 @@
+﻿<Window x:Class="AppWithManyDocumentsExample.Window1"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	Title="AppWithManyDocumentsExample" Height="300" Width="300"
+	>
+	<Grid>
+		<StackPanel>
+			<Button Click="Button_Click">Добавить окно</Button>
+			<Button Click="Button_Click1">Закрыть все окна</Button>
+		</StackPanel>
+	</Grid>
+</Window>
