@@ -11,7 +11,7 @@
 		<StackPanel>
 			<Slider Name="sliderFontSize" Margin="3" Minimum="1" Maximum="40" Value="10" TickFrequency="1" TickPlacement="TopLeft" />
 			<TextBox Name="txtFontSize" Text="{Binding ElementName=lblSampleText, Path=FontSize, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"></TextBox>
-			<TextBlock Margin="10" Text="{Binding Source={StaticResource CustomFont}, Path=Source}" Name="lblSampleText" FontSize="{Binding ElementName=sliderFontSize, Path=Value, Mode=TwoWay}" />
+			<TextBlock Margin="10" Text="{Binding Path=Title, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Window}}}" Name="lblSampleText" FontSize="{Binding ElementName=sliderFontSize, Path=Value, Mode=TwoWay}" />
 		</StackPanel>
 	</Grid>
 </Window>
