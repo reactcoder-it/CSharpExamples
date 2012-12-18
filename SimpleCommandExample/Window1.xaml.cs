@@ -47,5 +47,10 @@ namespace SimpleCommandExample
 		{
 			e.CanExecute = this._isDirty;
 		}
+		
+		void RequeryCommand_Executed(object sender, ExecutedRoutedEventArgs e)
+		{
+			MessageBox.Show("New command triggered by " + e.Source.ToString());
+		}
 	}
 }
