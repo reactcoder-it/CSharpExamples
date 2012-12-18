@@ -3,8 +3,6 @@
  * User: user
  * Date: 18.12.2012
  * Time: 10:13
- * 
- * To change this template use Tools | Options | Coding | Edit Standard Headers.
  */
 using System;
 using System.Collections.Generic;
@@ -26,6 +24,15 @@ namespace CommandsExample
 		public Window1()
 		{
 			InitializeComponent();
+			
+			CommandBinding binding = new CommandBinding(ApplicationCommands.New);
+			binding.Executed += new ExecutedRoutedEventHandler(NewCommand_Executed);
+			this.CommandBindings.Add(binding);
+		}
+		
+		private void NewCommand_Executed(object sender, ExecutedRoutedEventArgs e)
+		{
+			MessageBox.Show("New command triggered by " + e.Source.ToString());
 		}
 	}
 }
