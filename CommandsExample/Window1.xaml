@@ -14,7 +14,8 @@
 					<MenuItem Command="New"></MenuItem>
 				</MenuItem>
 			</Menu>
-			<Button Command="ApplicationCommands.New">New</Button>
+			<Button Margin="5" Padding="5" Command="ApplicationCommands.New"
+			        Content="{Binding RelativeSource={RelativeSource Self}, Path=Command.Text}" />
 		</StackPanel>
 	</Grid>
 </Window>
