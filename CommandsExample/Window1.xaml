@@ -9,6 +9,11 @@
 	
 	<Grid>
 		<StackPanel>
+			<Menu>
+				<MenuItem Header="File">
+					<MenuItem Command="New"></MenuItem>
+				</MenuItem>
+			</Menu>
 			<Button Command="ApplicationCommands.New">New</Button>
 		</StackPanel>
 	</Grid>
