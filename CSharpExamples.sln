@@ -24,6 +24,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppWithManyDocumentsExample
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SliderBindingExample", "SliderBindingExample\SliderBindingExample.csproj", "{665D7D0B-A192-4BD0-89DE-307A8A81AC32}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommandsExample", "CommandsExample\CommandsExample.csproj", "{9D8E250B-57C7-4E6E-B9C7-737C88E06284}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -74,5 +76,9 @@ Global
 		{665D7D0B-A192-4BD0-89DE-307A8A81AC32}.Debug|x86.ActiveCfg = Debug|x86
 		{665D7D0B-A192-4BD0-89DE-307A8A81AC32}.Release|x86.Build.0 = Release|x86
 		{665D7D0B-A192-4BD0-89DE-307A8A81AC32}.Release|x86.ActiveCfg = Release|x86
+		{9D8E250B-57C7-4E6E-B9C7-737C88E06284}.Debug|x86.Build.0 = Debug|x86
+		{9D8E250B-57C7-4E6E-B9C7-737C88E06284}.Debug|x86.ActiveCfg = Debug|x86
+		{9D8E250B-57C7-4E6E-B9C7-737C88E06284}.Release|x86.Build.0 = Release|x86
+		{9D8E250B-57C7-4E6E-B9C7-737C88E06284}.Release|x86.ActiveCfg = Release|x86
 	EndGlobalSection
 EndGlobal
