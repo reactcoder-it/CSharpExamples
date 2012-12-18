@@ -1,8 +1,12 @@
 ﻿<Window x:Class="CommandsExample.Window1"
 	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
 	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-	Title="CommandsExample" Height="300" Width="300"
-	>
+	Title="CommandsExample" Height="300" Width="300">
+	
+	<Window.CommandBindings>
+		<CommandBinding Command="ApplicationCommands.New" Executed="NewCommand_Executed" />
+	</Window.CommandBindings>
+	
 	<Grid>
 		<StackPanel>
 			<Button Command="ApplicationCommands.New">New</Button>

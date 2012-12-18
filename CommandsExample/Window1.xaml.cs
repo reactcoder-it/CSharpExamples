@@ -24,10 +24,6 @@ namespace CommandsExample
 		public Window1()
 		{
 			InitializeComponent();
-			
-			CommandBinding binding = new CommandBinding(ApplicationCommands.New);
-			binding.Executed += new ExecutedRoutedEventHandler(NewCommand_Executed);
-			this.CommandBindings.Add(binding);
 		}
 		
 		private void NewCommand_Executed(object sender, ExecutedRoutedEventArgs e)
