@@ -5,7 +5,7 @@
 	
 	<Window.Resources>
 		
-		<Style x:Key="BigFontButtonStyle" TargetType="Button">
+		<!--<Style x:Key="BigFontButtonStyle" TargetType="Button">
 			<Setter Property="FontFamily" Value="Times New Roman" />
 			<Setter Property="FontSize" Value="18" />
 			<Setter Property="FontWeight" Value="Bold" />
@@ -17,27 +17,41 @@
 			<Setter Property="TextBlock.Padding" Value="5" />
 		</Style>
 	
-		<!-- Стиль, основанный на стиле BigFontButtonStyle -->
+		 Стиль, основанный на стиле BigFontButtonStyle 
 		<Style x:Key="EmphasizedBigFontButtonStyle" TargetType="Button" BasedOn="{StaticResource BigFontButtonStyle}">
 			<Setter Property="Foreground" Value="White" />
 			<Setter Property="Background" Value="DarkBlue" />
+		</Style>-->
+	
+		<Style TargetType="Button">
+			<Setter Property="FontFamily" Value="Times New Roman" />
+			<Setter Property="FontSize" Value="18" />
+			<Setter Property="FontWeight" Value="Bold" />
+		</Style>
+	
+		<Style TargetType="TextBlock">
+			<EventSetter Event="MouseEnter" Handler="element_MouseEnter" />
+			<EventSetter Event="MouseLeave" Handler="element_MouseLeave" />
+			<Setter Property="Padding" Value="5" />
 		</Style>
 	
 	</Window.Resources>
 
 	<StackPanel>
 		
-		<Button Padding="5" Margin="5" Name="btnCmd" Style="{StaticResource BigFontButtonStyle}">
+		<Button Padding="5" Margin="5" Name="btnCmd">
 			A Customized Button
 		</Button>
+		
+		<TextBlock>Normal Content.</TextBlock>
 	
-		<Button Padding="5" Margin="5" Name="btnCmd1">
-			Second Customized Button
+		<Button Padding="5" Margin="5" Style="{x:Null}">
+			A Normal Button
 		</Button>
 	
-		<TextBlock Style="{StaticResource MouseOverHighlightStyle}">Hover over me.</TextBlock>
+		<TextBlock>More normal Content.</TextBlock>
 	
-		<Button Padding="5" Margin="5" Name="btnCmd2" Style="{StaticResource EmphasizedBigFontButtonStyle}">
+		<Button Padding="5" Margin="5" Name="btnCmd2">
 			Another Customized Button
 		</Button>
 	

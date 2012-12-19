@@ -26,8 +26,6 @@ namespace StyleExample
 		public Window1()
 		{
 			InitializeComponent();
-			
-			this.btnCmd1.Style = (Style)this.btnCmd1.FindResource("BigFontButtonStyle");
 		}
 		
 		private void element_MouseEnter(object sender, MouseEventArgs e)
