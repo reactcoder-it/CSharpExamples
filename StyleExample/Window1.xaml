@@ -24,16 +24,25 @@
 			</Style.Setters>
 			<Style.Triggers>
 				
-				<MultiTrigger>
-					<MultiTrigger.Conditions>
-						<Condition Property="Control.IsFocused" Value="True" />
-						<Condition Property="Control.IsMouseOver" Value="True" />
-					</MultiTrigger.Conditions>
+				<EventTrigger RoutedEvent="Mouse.MouseEnter">
+					<EventTrigger.Actions>
+						<BeginStoryboard>
+							<Storyboard>
+								<DoubleAnimation Duration="0:0:0.2" Storyboard.TargetProperty="FontSize" To="22" />
+							</Storyboard>
+						</BeginStoryboard>
+					</EventTrigger.Actions>
+				</EventTrigger>
 				
-					<MultiTrigger.Setters>
-						<Setter Property="Control.Foreground" Value="DarkRed" />
-					</MultiTrigger.Setters>
-				</MultiTrigger>
+				<EventTrigger RoutedEvent="Mouse.MouseLeave">
+					<EventTrigger.Actions>
+						<BeginStoryboard>
+							<Storyboard>
+								<DoubleAnimation Duration="0:0:1" Storyboard.TargetProperty="FontSize" />
+							</Storyboard>
+						</BeginStoryboard>
+					</EventTrigger.Actions>
+				</EventTrigger>
 
 			</Style.Triggers>
 		</Style>
