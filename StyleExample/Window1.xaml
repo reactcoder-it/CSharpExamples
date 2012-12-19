@@ -24,18 +24,16 @@
 			</Style.Setters>
 			<Style.Triggers>
 				
-				<Trigger Property="Control.IsFocused" Value="True">
-					<Setter Property="Control.Foreground" Value="DarkRed" />
-				</Trigger>
-			
-				<Trigger Property="Control.IsMouseOver" Value="True">
-					<Setter Property="Control.Foreground" Value="LightYellow" />
-					<Setter Property="Control.FontWeight" Value="Bold" />
-				</Trigger>
-			
-				<Trigger Property="Button.IsPressed" Value="True">
-					<Setter Property="Control.Foreground" Value="Red" />
-				</Trigger>
+				<MultiTrigger>
+					<MultiTrigger.Conditions>
+						<Condition Property="Control.IsFocused" Value="True" />
+						<Condition Property="Control.IsMouseOver" Value="True" />
+					</MultiTrigger.Conditions>
+				
+					<MultiTrigger.Setters>
+						<Setter Property="Control.Foreground" Value="DarkRed" />
+					</MultiTrigger.Setters>
+				</MultiTrigger>
 
 			</Style.Triggers>
 		</Style>
