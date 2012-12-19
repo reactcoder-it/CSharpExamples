@@ -17,6 +17,12 @@
 			<Setter Property="TextBlock.Padding" Value="5" />
 		</Style>
 	
+		<!-- Стиль, основанный на стиле BigFontButtonStyle -->
+		<Style x:Key="EmphasizedBigFontButtonStyle" TargetType="Button" BasedOn="{StaticResource BigFontButtonStyle}">
+			<Setter Property="Foreground" Value="White" />
+			<Setter Property="Background" Value="DarkBlue" />
+		</Style>
+	
 	</Window.Resources>
 
 	<StackPanel>
@@ -26,10 +32,14 @@
 		</Button>
 	
 		<Button Padding="5" Margin="5" Name="btnCmd1">
-			Another Customized Button
+			Second Customized Button
 		</Button>
 	
 		<TextBlock Style="{StaticResource MouseOverHighlightStyle}">Hover over me.</TextBlock>
+	
+		<Button Padding="5" Margin="5" Name="btnCmd2" Style="{StaticResource EmphasizedBigFontButtonStyle}">
+			Another Customized Button
+		</Button>
 	
 	</StackPanel>
 
