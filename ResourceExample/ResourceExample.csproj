@@ -71,8 +71,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Include="themes\generic.xaml" />
     <Page Include="Window1.xaml" />
-    <Page Include="AppBrushes.xaml" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
@@ -83,6 +83,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="images" />
+    <Folder Include="themes" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.Targets" />
 </Project>
