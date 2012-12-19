@@ -20,7 +20,7 @@
 			</Button.Resources>
 			<Button.Content>Another Tiled Button</Button.Content>
 		</Button>
-		<Label Foreground="{x:Static SystemColors.WindowTextBrush}">
+		<Label Foreground="{DynamicResource {x:Static SystemColors.WindowTextBrushKey}}">
 			Ordinary text
 		</Label>
 	</StackPanel>
