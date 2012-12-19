@@ -14,9 +14,15 @@
 	</Window.Resources>
 
 	<StackPanel>
+		
 		<Button Padding="5" Margin="5" Name="btnCmd" Style="{StaticResource BigFontButtonStyle}">
 			A Customized Button
 		</Button>
+	
+		<Button Padding="5" Margin="5" Name="btnCmd1">
+			Another Customized Button
+		</Button>
+	
 	</StackPanel>
 
 </Window>

@@ -26,6 +26,8 @@ namespace StyleExample
 		public Window1()
 		{
 			InitializeComponent();
+			
+			this.btnCmd1.Style = (Style)this.btnCmd1.FindResource("BigFontButtonStyle");
 		}
 	}
 }
