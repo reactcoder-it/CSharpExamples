@@ -12,14 +12,12 @@
 		<Button Background="{StaticResource TileBrush}" Margin="5" Padding="5" FontWeight="Bold" FontSize="14">
 			A Tiled Button
 		</Button>
-		<Button Margin="5" Padding="5" FontWeight="Bold" FontSize="14">
+		<Button Padding="5" Margin="5" FontWeight="Bold" FontSize="14">A Normal Button</Button>
+		<Button Background="{DynamicResource TileBrush}" Margin="5" Padding="5" FontWeight="Bold" FontSize="14">
 			<Button.Resources>
-				<ImageBrush x:Key="SecondTileBrush" TileMode="Tile" ViewportUnits="Absolute"
+				<ImageBrush x:Key="TileBrush" TileMode="Tile" ViewportUnits="Absolute"
 					Viewport="0 0 10 10" ImageSource="images/happyface2.jpg" Opacity="0.3" />
 			</Button.Resources>
-			<Button.Background>
-				<StaticResource ResourceKey="SecondTileBrush" />
-			</Button.Background>
 			<Button.Content>Another Tiled Button</Button.Content>
 		</Button>
 	</StackPanel>
