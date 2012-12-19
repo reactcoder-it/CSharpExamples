@@ -20,5 +20,8 @@
 			</Button.Resources>
 			<Button.Content>Another Tiled Button</Button.Content>
 		</Button>
+		<Label Foreground="{x:Static SystemColors.WindowTextBrush}">
+			Ordinary text
+		</Label>
 	</StackPanel>
 </Window>
