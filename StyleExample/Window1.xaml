@@ -5,10 +5,10 @@
 	
 	<Window.Resources>
 		
-		<Style x:Key="BigFontButtonStyle">
-			<Setter Property="Control.FontFamily" Value="Times New Roman" />
-			<Setter Property="Control.FontSize" Value="18" />
-			<Setter Property="Control.FontWeight" Value="Bold" />
+		<Style x:Key="BigFontButtonStyle" TargetType="Button">
+			<Setter Property="FontFamily" Value="Times New Roman" />
+			<Setter Property="FontSize" Value="18" />
+			<Setter Property="FontWeight" Value="Bold" />
 		</Style>
 	
 	</Window.Resources>
