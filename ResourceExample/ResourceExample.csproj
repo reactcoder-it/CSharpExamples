@@ -75,6 +75,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <Resource Include="images\happyface2.jpg" />
     <Resource Include="images\happyface.jpg">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
