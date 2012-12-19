@@ -72,6 +72,7 @@
   </ItemGroup>
   <ItemGroup>
     <Page Include="Window1.xaml" />
+    <Page Include="AppBrushes.xaml" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

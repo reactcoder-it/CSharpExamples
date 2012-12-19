@@ -3,11 +3,6 @@
 	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
 	Title="ResourceExample" Height="300" Width="300">
 	
-	<Window.Resources>
-		<ImageBrush x:Key="TileBrush" TileMode="Tile" ViewportUnits="Absolute" Viewport="0 0 32 32"
-			ImageSource="images/happyface.jpg" Opacity="0.3" />
-	</Window.Resources>
-	
 	<StackPanel Margin="5">
 		<Button Background="{StaticResource TileBrush}" Margin="5" Padding="5" FontWeight="Bold" FontSize="14">
 			A Tiled Button
