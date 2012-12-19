@@ -35,6 +35,18 @@
 			<Setter Property="Padding" Value="5" />
 		</Style>
 	
+		<Style x:Key="BigFontButton">
+			<Style.Setters>
+				<Setter Property="Control.FontFamily" Value="Times New Roman" />
+				<Setter Property="Control.FontSize" Value="18" />
+			</Style.Setters>
+			<Style.Triggers>
+				<Trigger Property="Control.IsFocused" Value="True">
+					<Setter Property="Control.Foreground" Value="DarkRed" />
+				</Trigger>
+			</Style.Triggers>
+		</Style>
+	
 	</Window.Resources>
 
 	<StackPanel>
@@ -52,6 +64,12 @@
 		<TextBlock>More normal Content.</TextBlock>
 	
 		<Button Padding="5" Margin="5" Name="btnCmd2">
+			Another Customized Button
+		</Button>
+	
+		<TextBlock>More normal Content.</TextBlock>
+	
+		<Button Padding="5" Margin="5" Style="{StaticResource BigFontButton}">
 			Another Customized Button
 		</Button>
 	
