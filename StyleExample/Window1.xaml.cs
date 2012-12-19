@@ -29,5 +29,15 @@ namespace StyleExample
 			
 			this.btnCmd1.Style = (Style)this.btnCmd1.FindResource("BigFontButtonStyle");
 		}
+		
+		private void element_MouseEnter(object sender, MouseEventArgs e)
+		{
+			((TextBlock)sender).Background = new SolidColorBrush(Colors.LightGoldenrodYellow);
+		}
+		
+		private void element_MouseLeave(object sender, MouseEventArgs e)
+		{
+			((TextBlock)sender).Background = null;
+		}
 	}
 }

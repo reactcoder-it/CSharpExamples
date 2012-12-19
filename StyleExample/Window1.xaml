@@ -11,6 +11,12 @@
 			<Setter Property="FontWeight" Value="Bold" />
 		</Style>
 	
+		<Style x:Key="MouseOverHighlightStyle">
+			<EventSetter Event="TextBlock.MouseEnter" Handler="element_MouseEnter" />
+			<EventSetter Event="TextBlock.MouseLeave" Handler="element_MouseLeave" />
+			<Setter Property="TextBlock.Padding" Value="5" />
+		</Style>
+	
 	</Window.Resources>
 
 	<StackPanel>
@@ -22,6 +28,8 @@
 		<Button Padding="5" Margin="5" Name="btnCmd1">
 			Another Customized Button
 		</Button>
+	
+		<TextBlock Style="{StaticResource MouseOverHighlightStyle}">Hover over me.</TextBlock>
 	
 	</StackPanel>
 
