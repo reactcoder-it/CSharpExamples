@@ -7,7 +7,7 @@
 		
 		<ControlTemplate x:Key="ButtonTemplate" TargetType="{x:Type Button}">
 			<Border BorderBrush="Orange" BorderThickness="3" CornerRadius="2" Background="Red" TextBlock.Foreground="White">
-				<ContentPresenter RecognizesAccessKey="True" />
+				<ContentPresenter RecognizesAccessKey="True" Margin="{TemplateBinding Padding}" />
 			</Border>
 		</ControlTemplate>
 	
