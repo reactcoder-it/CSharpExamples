@@ -32,6 +32,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ResourceExample", "Resource
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StyleExample", "StyleExample\StyleExample.csproj", "{16EE6859-0A5E-4435-A54B-FCECC193B85A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FiguresExample", "FiguresExample\FiguresExample.csproj", "{52DC3F99-424D-49E7-8C5C-4DDF5FDAAA84}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -98,5 +100,9 @@ Global
 		{16EE6859-0A5E-4435-A54B-FCECC193B85A}.Debug|x86.ActiveCfg = Debug|x86
 		{16EE6859-0A5E-4435-A54B-FCECC193B85A}.Release|x86.Build.0 = Release|x86
 		{16EE6859-0A5E-4435-A54B-FCECC193B85A}.Release|x86.ActiveCfg = Release|x86
+		{52DC3F99-424D-49E7-8C5C-4DDF5FDAAA84}.Debug|x86.Build.0 = Debug|x86
+		{52DC3F99-424D-49E7-8C5C-4DDF5FDAAA84}.Debug|x86.ActiveCfg = Debug|x86
+		{52DC3F99-424D-49E7-8C5C-4DDF5FDAAA84}.Release|x86.Build.0 = Release|x86
+		{52DC3F99-424D-49E7-8C5C-4DDF5FDAAA84}.Release|x86.ActiveCfg = Release|x86
 	EndGlobalSection
 EndGlobal
