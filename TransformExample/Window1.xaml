@@ -6,7 +6,7 @@
 	<Canvas>
 		<Rectangle Width="80" Height="10" Stroke="Blue" Fill="Yellow" Canvas.Left="100" Canvas.Top="100">
 			<Rectangle.RenderTransform>
-				<RotateTransform Angle="25" />
+				<RotateTransform Angle="25" CenterX="45" CenterY="5" />
 			</Rectangle.RenderTransform>
 		</Rectangle>
 	</Canvas>
