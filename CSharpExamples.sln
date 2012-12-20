@@ -30,6 +30,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleCommandExample", "Sim
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ResourceExample", "ResourceExample\ResourceExample.csproj", "{8DB71A86-FD1C-43A0-B3DA-B76A03E76168}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StyleExample", "StyleExample\StyleExample.csproj", "{16EE6859-0A5E-4435-A54B-FCECC193B85A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -92,5 +94,9 @@ Global
 		{8DB71A86-FD1C-43A0-B3DA-B76A03E76168}.Debug|x86.ActiveCfg = Debug|x86
 		{8DB71A86-FD1C-43A0-B3DA-B76A03E76168}.Release|x86.Build.0 = Release|x86
 		{8DB71A86-FD1C-43A0-B3DA-B76A03E76168}.Release|x86.ActiveCfg = Release|x86
+		{16EE6859-0A5E-4435-A54B-FCECC193B85A}.Debug|x86.Build.0 = Debug|x86
+		{16EE6859-0A5E-4435-A54B-FCECC193B85A}.Debug|x86.ActiveCfg = Debug|x86
+		{16EE6859-0A5E-4435-A54B-FCECC193B85A}.Release|x86.Build.0 = Release|x86
+		{16EE6859-0A5E-4435-A54B-FCECC193B85A}.Release|x86.ActiveCfg = Release|x86
 	EndGlobalSection
 EndGlobal
