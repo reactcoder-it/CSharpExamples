@@ -16,6 +16,7 @@
 			<Canvas Width="200" Height="150">
 				<Ellipse Fill="Yellow" Stroke="Blue" Canvas.Left="100" Canvas.Top="50" Height="50" Width="100" Margin="5" HorizontalAlignment="Left" />
 				<Rectangle Fill="Yellow" Stroke="Blue" Canvas.Left="30" Canvas.Top="40" Height="50" Width="100" Margin="5" HorizontalAlignment="Left" />
+				<Line Stroke="Blue" X1="0" Y1="0" X2="10" Y2="100" />
 			</Canvas>
 		</Viewbox>
 	
