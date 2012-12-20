@@ -19,6 +19,8 @@
 				<Line Stroke="Blue" X1="0" Y1="0" X2="10" Y2="100" />
 				<Polyline Stroke="Blue" Points="5,100 15,200" />
 				<Polyline Stroke="Blue" StrokeThickness="5" Points="10,150 30,140 50,160 70,130 90,170 110,120 130,180 150,110 170,190 190,100 210,240" />
+				<Polygon Stroke="Blue" StrokeThickness="1" Fill="Yellow" FillRule="Nonzero"
+					Points="15,200 68,70 110,200 0,125 135,125" />
 			</Canvas>
 		</Viewbox>
 	
