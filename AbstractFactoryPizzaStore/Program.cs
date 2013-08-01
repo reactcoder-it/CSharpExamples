@@ -14,7 +14,13 @@ namespace AbstractFactoryPizzaStore
 		{
 			Console.WriteLine("Hello World!");
 			
-			// TODO: Implement Functionality Here
+			PizzaStore nyStore = new NYPizzaStore();
+			Pizza pizza = nyStore.OrderPizza("cheese");
+			Console.WriteLine(pizza.Prepare());
+			Console.WriteLine(pizza.Bake());
+			Console.WriteLine(pizza.Cut());
+			Console.WriteLine(pizza.Box());
+			Console.WriteLine(pizza.Name + " готова...");
 			
 			Console.Write("Press any key to continue . . . ");
 			Console.ReadKey(true);

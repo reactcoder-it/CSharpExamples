@@ -47,17 +47,17 @@ namespace AbstractFactoryPizzaStore
 		
 		public virtual string Bake()
 		{
-			return "Bake for 25 minutes at 350\n";
+			return "Bake for 25 minutes at 350";
 		}
 		
 		public virtual string Cut()
 		{
-			return "Cutting the pizza into diagonal slices\n";
+			return "Cutting the pizza into diagonal slices";
 		}
 		
 		public virtual string Box()
 		{
-			return "Place pizza in official PizzaStore box\n";
+			return "Place pizza in official PizzaStore box";
 		}
 	}
 }
