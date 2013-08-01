@@ -24,5 +24,10 @@ namespace CommandPatternExample
 		{
 			return light.On();
 		}
+		
+		public object Undo()
+		{
+			return light.Off();
+		}
 	}
 }

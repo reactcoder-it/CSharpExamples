@@ -14,5 +14,6 @@ namespace CommandPatternExample
 	public interface ICommand
 	{
 		object Execute();
+		object Undo();
 	}
 }

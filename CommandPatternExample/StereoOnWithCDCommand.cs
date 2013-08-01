@@ -26,5 +26,10 @@ namespace CommandPatternExample
 				stereo.SetCD() + "\n" +
 				stereo.SetVolume(11);
 		}
+		
+		public object Undo()
+		{
+			return null;
+		}
 	}
 }

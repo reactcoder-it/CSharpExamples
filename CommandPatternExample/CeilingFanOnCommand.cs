@@ -24,5 +24,10 @@ namespace CommandPatternExample
 		{
 			return ceilingFan.High();
 		}
+		
+		public object Undo()
+		{
+			return null;
+		}
 	}
 }

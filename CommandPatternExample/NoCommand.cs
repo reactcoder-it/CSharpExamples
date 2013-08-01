@@ -21,5 +21,10 @@ namespace CommandPatternExample
 		{
 			return "NoCommand";
 		}
+		
+		public object Undo()
+		{
+			return "NoCommand";
+		}
 	}
 }

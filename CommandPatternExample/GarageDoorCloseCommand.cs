@@ -24,5 +24,10 @@ namespace CommandPatternExample
 		{
 			return garageDoor.Down();
 		}
+		
+		public object Undo()
+		{
+			return garageDoor.Up();
+		}
 	}
 }

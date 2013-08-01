@@ -24,5 +24,10 @@ namespace CommandPatternExample
 		{
 			return stereo.Off();
 		}
+		
+		public object Undo()
+		{
+			return null;
+		}
 	}
 }
