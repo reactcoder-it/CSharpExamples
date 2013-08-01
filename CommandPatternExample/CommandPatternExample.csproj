@@ -9,6 +9,8 @@
     <AssemblyName>CommandPatternExample</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <AppDesignerFolder>Properties</AppDesignerFolder>
+    <StartupObject>CommandPatternExample.RemoteLoader</StartupObject>
+    <NoWin32Manifest>False</NoWin32Manifest>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -45,14 +47,25 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CeilingFan.cs" />
+    <Compile Include="CeilingFanOffCommand.cs" />
+    <Compile Include="CeilingFanOnCommand.cs" />
     <Compile Include="GarageDoor.cs" />
+    <Compile Include="GarageDoorCloseCommand.cs" />
     <Compile Include="GarageDoorOpenCommand.cs" />
     <Compile Include="ICommand.cs" />
     <Compile Include="Light.cs" />
+    <Compile Include="LightOffCommand.cs" />
     <Compile Include="LightOnCommand.cs" />
+    <Compile Include="NoCommand.cs" />
+    <Compile Include="RemoteControl.cs" />
     <Compile Include="RemoteControlTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RemoteLoader.cs" />
     <Compile Include="SimpleRemoteControl.cs" />
+    <Compile Include="Stereo.cs" />
+    <Compile Include="StereoOffCommand.cs" />
+    <Compile Include="StereoOnWithCDCommand.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
