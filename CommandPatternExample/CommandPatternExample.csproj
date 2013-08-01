@@ -48,8 +48,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CeilingFan.cs" />
+    <Compile Include="CeilingFanHighCommand.cs" />
+    <Compile Include="CeilingFanLowCommand.cs" />
+    <Compile Include="CeilingFanMediumCommand.cs" />
     <Compile Include="CeilingFanOffCommand.cs" />
-    <Compile Include="CeilingFanOnCommand.cs" />
     <Compile Include="GarageDoor.cs" />
     <Compile Include="GarageDoorCloseCommand.cs" />
     <Compile Include="GarageDoorOpenCommand.cs" />

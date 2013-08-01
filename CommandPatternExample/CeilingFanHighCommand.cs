@@ -2,21 +2,21 @@
  * Created by SharpDevelop.
  * User: Vadim Pashaev <vmp@live.ru>
  * Date: 01.08.2013
- * Time: 14:01
+ * Time: 14:58
  */
 using System;
 
 namespace CommandPatternExample
 {
 	/// <summary>
-	/// Description of CeilingFanOffCommand.
+	/// Description of CeilingFanHighCommand.
 	/// </summary>
-	public class CeilingFanOffCommand : ICommand
+	public class CeilingFanHighCommand : ICommand
 	{
 		CeilingFan ceilingFan;
 		int prevSpeed;
 		
-		public CeilingFanOffCommand(CeilingFan ceilingFan)
+		public CeilingFanHighCommand(CeilingFan ceilingFan)
 		{
 			this.ceilingFan = ceilingFan;
 		}
@@ -24,7 +24,7 @@ namespace CommandPatternExample
 		public object Execute()
 		{
 			prevSpeed = ceilingFan.GetSpeed();
-			return ceilingFan.Off();
+			return ceilingFan.High();
 		}
 		
 		public object Undo()

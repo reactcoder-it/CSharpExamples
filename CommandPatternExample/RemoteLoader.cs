@@ -21,15 +21,17 @@ namespace CommandPatternExample
 			RemoteControlWithUndo remoteControl = new RemoteControlWithUndo();
 			
 			// Создание всех устройств
-			Light livingRoomLight = new Light("Living Room");
+			CeilingFan ceilingFan = new CeilingFan("Living Room");
 			
 			// Создание команд:
-			//   для управления освещением
-			LightOnCommand livingRoomLightOn = new LightOnCommand(livingRoomLight);
-			LightOffCommand livingRoomLightOff = new LightOffCommand(livingRoomLight);
+			//   для управления вентилятором
+			CeilingFanMediumCommand ceilingFanMedium = new CeilingFanMediumCommand(ceilingFan);
+			CeilingFanHighCommand ceilingFanHigh = new CeilingFanHighCommand(ceilingFan);
+			CeilingFanOffCommand ceilingFanOff = new CeilingFanOffCommand(ceilingFan);
 			
 			// Связываем команды с ячейками пульта
-			remoteControl.SetCommand(0, livingRoomLightOn, livingRoomLightOff);
+			remoteControl.SetCommand(0, ceilingFanMedium, ceilingFanOff);
+			remoteControl.SetCommand(1, ceilingFanHigh, ceilingFanOff);
 			
 			// Выводим список ячеек и связанных с ними команд
 			Console.WriteLine(remoteControl.toString());
@@ -39,8 +41,8 @@ namespace CommandPatternExample
 			Console.WriteLine(remoteControl.OffButtonWasPushed(0));
 			Console.WriteLine(remoteControl.toString());
 			Console.WriteLine(remoteControl.UndoButtonWasPushed());
-			Console.WriteLine(remoteControl.OffButtonWasPushed(0));
-			Console.WriteLine(remoteControl.OnButtonWasPushed(0));
+			
+			Console.WriteLine(remoteControl.OnButtonWasPushed(1));
 			Console.WriteLine(remoteControl.toString());
 			Console.WriteLine(remoteControl.UndoButtonWasPushed());
 			

@@ -14,44 +14,46 @@ namespace CommandPatternExample
 	public class CeilingFan
 	{
 		string location;
-		int level;
+		int speed;
 		
-		public const int HIGH = 2;
-		public const int MEDIUM = 1;
-		public const int LOW = 0;
+		public const int HIGH = 3;
+		public const int MEDIUM = 2;
+		public const int LOW = 1;
+		public const int OFF = 0;
 		
 		public CeilingFan(string location)
 		{
 			this.location = location;
+			speed = OFF;
 		}
 		
 		public string High()
 		{
-			level = HIGH;
+			speed = HIGH;
 			return location + " ceiling fan is on high";
 		}
 		
 		public string Medium()
 		{
-			level = MEDIUM;
+			speed = MEDIUM;
 			return location + " ceiling fan is on medium";
 		}
 		
 		public string Low()
 		{
-			level = LOW;
+			speed = LOW;
 			return location + " ceiling fan is on low";
 		}
 		
 		public string Off()
 		{
-			level = LOW;
+			speed = LOW;
 			return location + " ceiling fan is off";
 		}
 		
 		public int GetSpeed()
 		{
-			return level;
+			return speed;
 		}
 	}
 }
