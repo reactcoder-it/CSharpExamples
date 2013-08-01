@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AbstractFactoryPizzaStore",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SingletonExample", "SingletonExample\SingletonExample.csproj", "{004C2628-78E2-43E0-AD67-91BCC2A2D87B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommandPatternExample", "CommandPatternExample\CommandPatternExample.csproj", "{D18B3F7C-25FB-4258-9A78-8009B916ED07}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,5 +22,9 @@ Global
 		{004C2628-78E2-43E0-AD67-91BCC2A2D87B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{004C2628-78E2-43E0-AD67-91BCC2A2D87B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{004C2628-78E2-43E0-AD67-91BCC2A2D87B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D18B3F7C-25FB-4258-9A78-8009B916ED07}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D18B3F7C-25FB-4258-9A78-8009B916ED07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D18B3F7C-25FB-4258-9A78-8009B916ED07}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D18B3F7C-25FB-4258-9A78-8009B916ED07}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 EndGlobal
