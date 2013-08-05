@@ -14,6 +14,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemplateMethodPatternExampl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinderPatternExample", "BinderPatternExample\BinderPatternExample.csproj", "{313FC963-581A-4440-9626-96A97F26ED6C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StatePatternExample", "StatePatternExample\StatePatternExample.csproj", "{D163BBC3-056F-4A3F-AF2A-D3A3860D06C7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -44,5 +46,9 @@ Global
 		{313FC963-581A-4440-9626-96A97F26ED6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{313FC963-581A-4440-9626-96A97F26ED6C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{313FC963-581A-4440-9626-96A97F26ED6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D163BBC3-056F-4A3F-AF2A-D3A3860D06C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D163BBC3-056F-4A3F-AF2A-D3A3860D06C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D163BBC3-056F-4A3F-AF2A-D3A3860D06C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D163BBC3-056F-4A3F-AF2A-D3A3860D06C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 EndGlobal
