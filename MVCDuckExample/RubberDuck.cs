@@ -13,11 +13,23 @@ namespace MVCDuckExample
 	/// </summary>
 	public class RubberDuck : IQuackable
 	{
+		Observable observable;
+		
 		public RubberDuck() {
+			observable = new Observable(this);
 		}
 		
 		public void Quack() {
 			Console.WriteLine("Squeak");
+			NotifyObservers();
+		}
+		
+		public void RegisterObserver(IObserver observer) {
+			observable.RegisterObserver(observer);
+		}
+		
+		public void NotifyObservers() {
+			observable.NotifyObservers();
 		}
 	}
 }

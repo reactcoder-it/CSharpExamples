@@ -15,18 +15,29 @@ namespace MVCDuckExample
 	{
 		IQuackable duck;
 		static int numberOfQuacks;
+		Observable observable;
 		
 		public QuackCounter(IQuackable duck) {
 			this.duck = duck;
+			observable = new Observable(this);
 		}
 		
 		public void Quack() {
 			duck.Quack();
 			numberOfQuacks++;
+			NotifyObservers();
 		}
 		
 		public static int GetQuacks() {
 			return numberOfQuacks;
+		}
+		
+		public void RegisterObserver(IObserver observer) {
+			observable.RegisterObserver(observer);
+		}
+		
+		public void NotifyObservers() {
+			observable.NotifyObservers();
 		}
 	}
 }

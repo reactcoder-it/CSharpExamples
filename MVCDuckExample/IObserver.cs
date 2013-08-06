@@ -2,17 +2,17 @@
  * Created by SharpDevelop.
  * User: Vadim Pashaev <vmp@live.ru>
  * Date: 06.08.2013
- * Time: 12:31
+ * Time: 13:44
  */
 using System;
 
 namespace MVCDuckExample
 {
 	/// <summary>
-	/// Description of Quackable.
+	/// Description of IObserver.
 	/// </summary>
-	public interface IQuackable : IQuackObservable
+	public interface IObserver
 	{
-		void Quack();
+		void Update(IQuackObservable duck);
 	}
 }

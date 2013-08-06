@@ -46,6 +46,11 @@ namespace MVCDuckExample
 			Console.WriteLine("\nDuck Simulator: Mallard Flock Simulation");
 			Simulate(flockOfMallards);
 			
+			Console.WriteLine("\nDuck Simulator: With observer");
+			Quackologist quackologist = new Quackologist();
+			flockOfDucks.RegisterObserver(quackologist);
+			Simulate(flockOfDucks);
+			
 			Console.WriteLine("The ducks quacked " + QuackCounter.GetQuacks() + " times");
 		}
 		

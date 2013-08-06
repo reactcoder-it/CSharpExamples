@@ -15,6 +15,11 @@ namespace MVCDuckExample
 	public class Flock : IQuackable
 	{
 		ArrayList quackers = new ArrayList();
+		Observable observable;
+		
+		public Flock() {
+			observable = new Observable(this);
+		}
 		
 		public void Add(IQuackable quacker) {
 			quackers.Add(quacker);
@@ -23,7 +28,16 @@ namespace MVCDuckExample
 		public void Quack() {
 			foreach (IQuackable quacker in quackers) {
 				quacker.Quack();
+				NotifyObservers();
 			}
+		}
+		
+		public void RegisterObserver(IObserver observer) {
+			observable.RegisterObserver(observer);
+		}
+		
+		public void NotifyObservers() {
+			observable.NotifyObservers();
 		}
 	}
 }
