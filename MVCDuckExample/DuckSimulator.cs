@@ -13,11 +13,11 @@ namespace MVCDuckExample
 	/// </summary>
 	public class DuckSimulator
 	{
-		public void Simulate() {
-			IQuackable mallardDuck = new QuackCounter(new MallardDuck());
-			IQuackable redheadDuck = new QuackCounter(new RedheadDuck());
-			IQuackable duckCall = new QuackCounter(new DuckCall());
-			IQuackable rubberDuck = new QuackCounter(new RubberDuck());
+		public void Simulate(AbstractDuckFactory duckFactory) {
+			IQuackable mallardDuck = duckFactory.CreateMallardDuck();
+			IQuackable redheadDuck = duckFactory.CreateRedheadDuck();
+			IQuackable duckCall = duckFactory.CreateDuckCall();
+			IQuackable rubberDuck = duckFactory.CreateRubberDuck();
 			IQuackable gooseDuck = new GooseAdapter(new Goose());
 			
 			Console.WriteLine("\nDuck Simulator: With Goose Adapter");

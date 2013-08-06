@@ -16,7 +16,9 @@ namespace MVCDuckExample
 			Console.WriteLine("============================");
 			
 			DuckSimulator simulator = new DuckSimulator();
-			simulator.Simulate();
+			AbstractDuckFactory duckFactory = new CountingDuckFactory();
+			
+			simulator.Simulate(duckFactory);
 			
 			Console.WriteLine("============================");
 			Console.Write("Press any key to continue . . . ");

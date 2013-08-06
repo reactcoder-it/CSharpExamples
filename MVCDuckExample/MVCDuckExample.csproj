@@ -47,7 +47,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AbstractDuckFactory.cs" />
+    <Compile Include="CountingDuckFactory.cs" />
     <Compile Include="DuckCall.cs" />
+    <Compile Include="DuckFactory.cs" />
     <Compile Include="DuckSimulator.cs" />
     <Compile Include="Goose.cs" />
     <Compile Include="GooseAdapter.cs" />
