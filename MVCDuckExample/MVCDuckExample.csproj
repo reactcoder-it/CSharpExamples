@@ -52,6 +52,7 @@
     <Compile Include="DuckCall.cs" />
     <Compile Include="DuckFactory.cs" />
     <Compile Include="DuckSimulator.cs" />
+    <Compile Include="Flock.cs" />
     <Compile Include="Goose.cs" />
     <Compile Include="GooseAdapter.cs" />
     <Compile Include="MallardDuck.cs" />
