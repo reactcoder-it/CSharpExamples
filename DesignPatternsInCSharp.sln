@@ -18,6 +18,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StatePatternExample", "Stat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProxyPatternExample", "ProxyPatternExample\ProxyPatternExample.csproj", "{D9E8DFC7-CEE2-4DC7-9E79-B4EACA847E6C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCDuckExample", "MVCDuckExample\MVCDuckExample.csproj", "{7751E2A0-7D01-473F-91CD-4376187CB263}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -56,5 +58,9 @@ Global
 		{D9E8DFC7-CEE2-4DC7-9E79-B4EACA847E6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D9E8DFC7-CEE2-4DC7-9E79-B4EACA847E6C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D9E8DFC7-CEE2-4DC7-9E79-B4EACA847E6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7751E2A0-7D01-473F-91CD-4376187CB263}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7751E2A0-7D01-473F-91CD-4376187CB263}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7751E2A0-7D01-473F-91CD-4376187CB263}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7751E2A0-7D01-473F-91CD-4376187CB263}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 EndGlobal
