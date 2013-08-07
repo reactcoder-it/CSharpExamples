@@ -11,8 +11,10 @@ namespace UsingThreadExample
 {
 	public static class Program
 	{
-		[ThreadStatic]
-		public static int _field;
+		public static ThreadLocal<int> _field = new ThreadLocal<int>(() =>
+		{
+			return Thread.CurrentThread.ManagedThreadId;
+		});
 		
 		public static void Main(string[] args)
 		{
@@ -20,19 +22,17 @@ namespace UsingThreadExample
 			
 			new Thread(() =>
 			{
-		       	for (int x=0; x<10; x++)
+		       	for (int x=0; x<_field.Value; x++)
 		       	{
-		       		_field++;
-		       		Console.WriteLine("Thread A: {0}", _field);
+		       		Console.WriteLine("Thread A: {0}", x);
 		       	}
 			}).Start();
 			
 			new Thread(() =>
 			{
-		       	for (int x=0; x<10; x++)
+		       	for (int x=0; x<_field.Value; x++)
 		       	{
-		       		_field++;
-		       		Console.WriteLine("Thread B: {0}", _field);
+		       		Console.WriteLine("Thread B: {0}", x);
 		       	}
 			}).Start();
 			
