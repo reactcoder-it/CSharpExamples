@@ -24,8 +24,22 @@ namespace UsingThreadExample
 		{
 			Console.WriteLine("Hello World!");
 			
-			Thread t = new Thread(new ParameterizedThreadStart(ThreadMethod));
-			t.Start(5);
+			bool stopped = false;
+			
+			Thread t = new Thread(new ThreadStart(() =>
+			{
+				while (!stopped)
+				{
+					Console.WriteLine("Running...");
+					Thread.Sleep(1000);
+				}
+			}));
+			
+			t.Start();
+			Console.Write("Press any key to exit . . . ");
+			Console.ReadKey(true);
+			
+			stopped = true;
 			t.Join();
 			
 			Console.Write("Press any key to continue . . . ");
