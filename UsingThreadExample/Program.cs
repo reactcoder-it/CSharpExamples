@@ -11,10 +11,12 @@ namespace UsingThreadExample
 {
 	public static class Program
 	{
-		public static void ThreadMethod() {
-			for (int i=0; i<10; i++) {
+		public static void ThreadMethod(Object o)
+		{
+			for (int i=0; i<(int)o; i++)
+			{
 				Console.WriteLine("ThreadProc: {0}", i);
-				Thread.Sleep(1000);
+				Thread.Sleep(0);
 			}
 		}
 		
@@ -22,9 +24,9 @@ namespace UsingThreadExample
 		{
 			Console.WriteLine("Hello World!");
 			
-			Thread t = new Thread(new ThreadStart(ThreadMethod));
-			t.IsBackground = true;
-			t.Start();
+			Thread t = new Thread(new ParameterizedThreadStart(ThreadMethod));
+			t.Start(5);
+			t.Join();
 			
 			Console.Write("Press any key to continue . . . ");
 			Console.ReadKey(true);
