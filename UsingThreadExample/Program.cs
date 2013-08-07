@@ -14,7 +14,7 @@ namespace UsingThreadExample
 		public static void ThreadMethod() {
 			for (int i=0; i<10; i++) {
 				Console.WriteLine("ThreadProc: {0}", i);
-				Thread.Sleep(0);
+				Thread.Sleep(1000);
 			}
 		}
 		
@@ -23,14 +23,8 @@ namespace UsingThreadExample
 			Console.WriteLine("Hello World!");
 			
 			Thread t = new Thread(new ThreadStart(ThreadMethod));
+			t.IsBackground = true;
 			t.Start();
-			
-			for (int i=0; i<4; i++) {
-				Console.WriteLine("MainThread: Do Some Work.");
-				Thread.Sleep(0);
-			}
-			
-			t.Join();
 			
 			Console.Write("Press any key to continue . . . ");
 			Console.ReadKey(true);
