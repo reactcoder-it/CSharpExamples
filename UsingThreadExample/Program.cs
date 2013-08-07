@@ -11,36 +11,30 @@ namespace UsingThreadExample
 {
 	public static class Program
 	{
-		public static void ThreadMethod(Object o)
-		{
-			for (int i=0; i<(int)o; i++)
-			{
-				Console.WriteLine("ThreadProc: {0}", i);
-				Thread.Sleep(0);
-			}
-		}
+		[ThreadStatic]
+		public static int _field;
 		
 		public static void Main(string[] args)
 		{
 			Console.WriteLine("Hello World!");
 			
-			bool stopped = false;
-			
-			Thread t = new Thread(new ThreadStart(() =>
+			new Thread(() =>
 			{
-				while (!stopped)
-				{
-					Console.WriteLine("Running...");
-					Thread.Sleep(1000);
-				}
-			}));
+		       	for (int x=0; x<10; x++)
+		       	{
+		       		_field++;
+		       		Console.WriteLine("Thread A: {0}", _field);
+		       	}
+			}).Start();
 			
-			t.Start();
-			Console.Write("Press any key to exit . . . ");
-			Console.ReadKey(true);
-			
-			stopped = true;
-			t.Join();
+			new Thread(() =>
+			{
+		       	for (int x=0; x<10; x++)
+		       	{
+		       		_field++;
+		       		Console.WriteLine("Thread B: {0}", _field);
+		       	}
+			}).Start();
 			
 			Console.Write("Press any key to continue . . . ");
 			Console.ReadKey(true);
