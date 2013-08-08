@@ -11,30 +11,14 @@ namespace UsingThreadExample
 {
 	public static class Program
 	{
-		public static ThreadLocal<int> _field = new ThreadLocal<int>(() =>
-		{
-			return Thread.CurrentThread.ManagedThreadId;
-		});
-		
 		public static void Main(string[] args)
 		{
 			Console.WriteLine("Hello World!");
 			
-			new Thread(() =>
+			ThreadPool.QueueUserWorkItem((s) =>
 			{
-		       	for (int x=0; x<_field.Value; x++)
-		       	{
-		       		Console.WriteLine("Thread A: {0}", x);
-		       	}
-			}).Start();
-			
-			new Thread(() =>
-			{
-		       	for (int x=0; x<_field.Value; x++)
-		       	{
-		       		Console.WriteLine("Thread B: {0}", x);
-		       	}
-			}).Start();
+				Console.WriteLine("\nWorking on a thread from threadpool");
+			});
 			
 			Console.Write("Press any key to continue . . . ");
 			Console.ReadKey(true);
