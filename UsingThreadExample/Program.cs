@@ -16,16 +16,17 @@ namespace UsingThreadExample
 		{
 			Console.WriteLine("Hello World!");
 			
-			Task t = Task.Factory.StartNew(() =>
+			Task<int> t = Task.Factory.StartNew(() =>
 			{
 	           	for (int x=0; x<100; x++)
 	           	{
 	           		Console.Write('*');
 	           		Thread.Sleep(200);
 	           	}
+	           	return 42;
 			});
 			
-			t.Wait();
+			Console.WriteLine("\n" + t.Result);
 			
 			Console.Write("\nPress any key to continue . . . ");
 			Console.ReadKey(true);
