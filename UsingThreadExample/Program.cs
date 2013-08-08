@@ -5,6 +5,7 @@
  * Time: 10:49
  */
 using System;
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -16,27 +17,23 @@ namespace UsingThreadExample
 		{
 			Console.WriteLine("Hello World!");
 			
-			Task[] tasks = new Task[3];
+			Task<int>[] tasks = new Task<int>[3];
 			
-			tasks[0] = Task.Factory.StartNew(() =>
-			{
-				Thread.Sleep(1000);
-				Console.WriteLine("1");
-			});
+			tasks[0] = Task.Factory.StartNew(() => { Thread.Sleep(2000); return 1; });
+			tasks[1] = Task.Factory.StartNew(() => { Thread.Sleep(1000); return 2; });
+			tasks[2] = Task.Factory.StartNew(() => { Thread.Sleep(3000); return 3; });
 			
-			tasks[1] = Task.Factory.StartNew(() =>
+			while (tasks.Length > 0)
 			{
-				Thread.Sleep(1000);
-				Console.WriteLine("2");
-			});
+				int i = Task.WaitAny(tasks);
+				Task<int> completedTask = tasks[i];
 				
-			tasks[2] = Task.Factory.StartNew(() =>
-			{
-				Thread.Sleep(1000);
-				Console.WriteLine("3");
-			});
-			
-			Task.WaitAll(tasks);
+				Console.WriteLine(completedTask.Result);
+				
+				var temp = tasks.ToList();
+				temp.RemoveAt(i);
+				tasks = temp.ToArray();
+			}
 			
 			Console.Write("Press any key to continue . . . ");
 			Console.ReadKey(true);
