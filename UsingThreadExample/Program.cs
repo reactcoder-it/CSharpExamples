@@ -16,26 +16,27 @@ namespace UsingThreadExample
 		{
 			Console.WriteLine("Hello World!");
 			
-			Task<Int32[]> parent = Task.Factory.StartNew(() =>
+			Task[] tasks = new Task[3];
+			
+			tasks[0] = Task.Factory.StartNew(() =>
 			{
-				var results = new Int32[3];
-				
-				TaskFactory tf = new TaskFactory(TaskCreationOptions.AttachedToParent, TaskContinuationOptions.ExecuteSynchronously);
-				
-				tf.StartNew(() => results[0] = 0);
-				tf.StartNew(() => results[1] = 1);
-				tf.StartNew(() => results[2] = 2);
-				
-				return results;
+				Thread.Sleep(1000);
+				Console.WriteLine("1");
 			});
 			
-			var finalTask = parent.ContinueWith(parentTask =>
+			tasks[1] = Task.Factory.StartNew(() =>
 			{
-				foreach (int i in parentTask.Result)
-					Console.WriteLine(i);
+				Thread.Sleep(1000);
+				Console.WriteLine("2");
+			});
+				
+			tasks[2] = Task.Factory.StartNew(() =>
+			{
+				Thread.Sleep(1000);
+				Console.WriteLine("3");
 			});
 			
-			finalTask.Wait();
+			Task.WaitAll(tasks);
 			
 			Console.Write("Press any key to continue . . . ");
 			Console.ReadKey(true);
