@@ -6,6 +6,7 @@
  */
 using System;
 using System.Threading;
+using System.Threading.Tasks;
 
 namespace UsingThreadExample
 {
@@ -15,12 +16,18 @@ namespace UsingThreadExample
 		{
 			Console.WriteLine("Hello World!");
 			
-			ThreadPool.QueueUserWorkItem((s) =>
+			Task t = Task.Factory.StartNew(() =>
 			{
-				Console.WriteLine("\nWorking on a thread from threadpool");
+	           	for (int x=0; x<100; x++)
+	           	{
+	           		Console.Write('*');
+	           		Thread.Sleep(200);
+	           	}
 			});
 			
-			Console.Write("Press any key to continue . . . ");
+			t.Wait();
+			
+			Console.Write("\nPress any key to continue . . . ");
 			Console.ReadKey(true);
 		}
 	}
