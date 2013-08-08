@@ -18,20 +18,22 @@ namespace UsingThreadExample
 		{
 			Console.WriteLine("Hello World!");
 			
-			string result = DownloadContent().Result;
-			Console.WriteLine(result);
-			
 			Console.Write("Press any key to continue . . . ");
 			Console.ReadKey(true);
 		}
 		
-		public static async Task<String> DownloadContent()
+		public static Task SleepAsyncA(int millisecondsTimeout)
 		{
-			using (HttpClient client = new HttpClient())
-			{
-				String result = await client.GetStringAsync("http://www.github.com");
-				return result;
-			}
+			return Task.Run(() => Thread.Sleep(millisecondsTimeout));
+		}
+		
+		public static Task SleepAsyncB(int millisecondsTimeout)
+		{
+			TaskCompletionSource<bool> tcs = null;
+			var t = new Timer(delegate { tcs.TrySetResult(true); }, null, -1, -1);
+			tcs = new TaskCompletionSource<bool>(t);
+			t.Change(millisecondsTimeout, -1);
+			return tcs.Task;
 		}
 	}
 }
