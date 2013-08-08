@@ -17,23 +17,16 @@ namespace UsingThreadExample
 		{
 			Console.WriteLine("Hello World!");
 			
-			Task<int>[] tasks = new Task<int>[3];
-			
-			tasks[0] = Task.Factory.StartNew(() => { Thread.Sleep(2000); return 1; });
-			tasks[1] = Task.Factory.StartNew(() => { Thread.Sleep(1000); return 2; });
-			tasks[2] = Task.Factory.StartNew(() => { Thread.Sleep(3000); return 3; });
-			
-			while (tasks.Length > 0)
+			Parallel.For(0, 10, i =>
 			{
-				int i = Task.WaitAny(tasks);
-				Task<int> completedTask = tasks[i];
-				
-				Console.WriteLine(completedTask.Result);
-				
-				var temp = tasks.ToList();
-				temp.RemoveAt(i);
-				tasks = temp.ToArray();
-			}
+				Thread.Sleep(1000);
+			});
+			
+			var numbers = Enumerable.Range(0, 10);
+			Parallel.ForEach(numbers, i =>
+			{
+				Thread.Sleep(1000);
+			});
 			
 			Console.Write("Press any key to continue . . . ");
 			Console.ReadKey(true);
