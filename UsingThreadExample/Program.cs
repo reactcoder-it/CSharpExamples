@@ -6,6 +6,7 @@
  */
 using System;
 using System.Linq;
+using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -17,18 +18,20 @@ namespace UsingThreadExample
 		{
 			Console.WriteLine("Hello World!");
 			
-			ParallelLoopResult result = Parallel.For(0, 1000, (int i, ParallelLoopState loopState) =>
-			{
-				if (i == 500)
-				{
-					Console.WriteLine("Breaking loop");
-					loopState.Break();
-				}
-				return;
-			});
+			string result = DownloadContent().Result;
+			Console.WriteLine(result);
 			
 			Console.Write("Press any key to continue . . . ");
 			Console.ReadKey(true);
+		}
+		
+		public static async Task<String> DownloadContent()
+		{
+			using (HttpClient client = new HttpClient())
+			{
+				String result = await client.GetStringAsync("http://www.github.com");
+				return result;
+			}
 		}
 	}
 }
