@@ -4,6 +4,8 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # SharpDevelop 4.3
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UsingThreadExample", "UsingThreadExample\UsingThreadExample.csproj", "{13BEF70C-8643-4EF2-A4C4-5D6FE638B55A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CofigureAwaitUsing", "CofigureAwaitUsing\CofigureAwaitUsing.csproj", "{A7754DD4-6342-43B3-BE1B-6369916DFA06}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -14,5 +16,9 @@ Global
 		{13BEF70C-8643-4EF2-A4C4-5D6FE638B55A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{13BEF70C-8643-4EF2-A4C4-5D6FE638B55A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{13BEF70C-8643-4EF2-A4C4-5D6FE638B55A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7754DD4-6342-43B3-BE1B-6369916DFA06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7754DD4-6342-43B3-BE1B-6369916DFA06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7754DD4-6342-43B3-BE1B-6369916DFA06}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7754DD4-6342-43B3-BE1B-6369916DFA06}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 EndGlobal
