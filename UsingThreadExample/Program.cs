@@ -24,6 +24,9 @@ namespace UsingThreadExample
 	           		Thread.Sleep(200);
 	           	}
 	           	return 42;
+			}).ContinueWith((i) =>
+			{
+				return i.Result * 2;
 			});
 			
 			Console.WriteLine("\n" + t.Result);
