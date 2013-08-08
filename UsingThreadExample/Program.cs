@@ -18,16 +18,25 @@ namespace UsingThreadExample
 			
 			Task<int> t = Task.Factory.StartNew(() =>
 			{
-	           	for (int x=0; x<100; x++)
-	           	{
-	           		Console.Write('*');
-	           		Thread.Sleep(200);
-	           	}
 	           	return 42;
-			}).ContinueWith((i) =>
-			{
-				return i.Result * 2;
 			});
+			
+			t.ContinueWith((i) =>
+			{
+				Console.WriteLine("Cancelled");
+			}, TaskContinuationOptions.OnlyOnCanceled);
+			
+			t.ContinueWith((i) =>
+			{
+				Console.WriteLine("Faulted");
+			}, TaskContinuationOptions.OnlyOnFaulted);
+			
+			var completedTask = t.ContinueWith((i) =>
+			{
+				Console.WriteLine("Completed");
+			}, TaskContinuationOptions.OnlyOnRanToCompletion);
+			
+			completedTask.Wait();
 			
 			Console.WriteLine("\n" + t.Result);
 			
