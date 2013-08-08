@@ -16,7 +16,7 @@ namespace UsingPLINQExample
 			Console.WriteLine("Hello World!");
 			
 			var numbers = Enumerable.Range(0, 10);
-			var parallelResult = numbers.AsParallel()
+			var parallelResult = numbers.AsParallel().AsOrdered()
 				.Where(i => i % 2 == 0)
 				.ToArray();
 			
