@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UsingThreadExample", "Using
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CofigureAwaitUsing", "CofigureAwaitUsing\CofigureAwaitUsing.csproj", "{A7754DD4-6342-43B3-BE1B-6369916DFA06}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UsingPLINQExample", "UsingPLINQExample\UsingPLINQExample.csproj", "{06FE55A4-A7EC-447A-A301-7A4A09573B39}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,5 +22,9 @@ Global
 		{A7754DD4-6342-43B3-BE1B-6369916DFA06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A7754DD4-6342-43B3-BE1B-6369916DFA06}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A7754DD4-6342-43B3-BE1B-6369916DFA06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06FE55A4-A7EC-447A-A301-7A4A09573B39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06FE55A4-A7EC-447A-A301-7A4A09573B39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06FE55A4-A7EC-447A-A301-7A4A09573B39}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06FE55A4-A7EC-447A-A301-7A4A09573B39}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 EndGlobal
