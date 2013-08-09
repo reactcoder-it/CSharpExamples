@@ -10,6 +10,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UsingPLINQExample", "UsingP
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UsingConcurrentCollections", "UsingConcurrentCollections\UsingConcurrentCollections.csproj", "{1018BE24-1B70-4421-9E23-4825EE1189C1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UsingConcurrentBag", "UsingConcurrentBag\UsingConcurrentBag.csproj", "{52D940D0-E3B2-44DF-9D01-6CED3F1F2ADA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,5 +34,9 @@ Global
 		{1018BE24-1B70-4421-9E23-4825EE1189C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1018BE24-1B70-4421-9E23-4825EE1189C1}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1018BE24-1B70-4421-9E23-4825EE1189C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52D940D0-E3B2-44DF-9D01-6CED3F1F2ADA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52D940D0-E3B2-44DF-9D01-6CED3F1F2ADA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52D940D0-E3B2-44DF-9D01-6CED3F1F2ADA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52D940D0-E3B2-44DF-9D01-6CED3F1F2ADA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 EndGlobal
