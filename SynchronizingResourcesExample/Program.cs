@@ -10,9 +10,10 @@ using System.Threading.Tasks;
 namespace SynchronizingResourcesExample
 {
 	/// <summary>
-	/// Данный пример показывает что происходит при обработке
-	/// глобальной переменной несинхронизированными потоками.
-	/// В данном примере вывод не будет иметь одинаковый результат.
+	/// Одной из возможностей синхронизации является использование
+	/// оператора lock. После его использования программа будет
+	/// всегда выводить значение = 0, поскольку теперь доступ к
+	/// переменной синхронизирован.
 	/// </summary>
 	public class Program
 	{
@@ -21,14 +22,17 @@ namespace SynchronizingResourcesExample
 			Console.WriteLine("Hello World!");
 			
 			int n = 0;
+			var _lock = new Object();
 			
 			var up = Task.Run(() =>
 			{
 				for (int i=0; i<1000000; i++)
-					n++;
+					lock (_lock)
+						n++;
 			});
 			
 			for (int i=0; i<1000000; i++)
+				lock (_lock)
 					n--;
 			
 			up.Wait();
