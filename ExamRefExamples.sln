@@ -14,6 +14,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UsingConcurrentBag", "Using
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UsingConcurrentStack", "UsingConcurrentStack\UsingConcurrentStack.csproj", "{0630BBAD-6D8D-4FF5-AD38-45F66A67019F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UsingConcurrentQueue", "UsingConcurrentQueue\UsingConcurrentQueue.csproj", "{B307DD61-5DA6-48AB-84AA-738E8CF924DC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -44,5 +46,9 @@ Global
 		{0630BBAD-6D8D-4FF5-AD38-45F66A67019F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{0630BBAD-6D8D-4FF5-AD38-45F66A67019F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{0630BBAD-6D8D-4FF5-AD38-45F66A67019F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B307DD61-5DA6-48AB-84AA-738E8CF924DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B307DD61-5DA6-48AB-84AA-738E8CF924DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B307DD61-5DA6-48AB-84AA-738E8CF924DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B307DD61-5DA6-48AB-84AA-738E8CF924DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 EndGlobal
