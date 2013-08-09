@@ -19,10 +19,8 @@ namespace UsingConcurrentCollections
 			BlockingCollection<String> col = new BlockingCollection<string>();
 			Task read = Task.Run(() =>
 			{
-				while (true)
-				{
-					Console.WriteLine(col.Take());
-				}
+				foreach (String v in col.GetConsumingEnumerable())
+					Console.WriteLine(v);
 			});
 			
 			Task write = Task.Run(() =>
