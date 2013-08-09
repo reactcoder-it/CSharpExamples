@@ -18,14 +18,9 @@ namespace UsingPLINQExample
 			var numbers = Enumerable.Range(0, 20);
 			var parallelResult = numbers
 				.AsParallel()
-				.AsOrdered()
-				.Where(i => i % 2 == 0)
-				.AsSequential();
+				.Where(i => i % 2 == 0);
 			
-			foreach (int i in parallelResult.Take(5))
-			{
-				Console.WriteLine(i);
-			}
+			parallelResult.ForAll(e => Console.WriteLine(e));
 			
 			Console.Write("Press any key to continue . . . ");
 			Console.ReadKey(true);
