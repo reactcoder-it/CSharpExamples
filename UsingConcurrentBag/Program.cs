@@ -6,6 +6,8 @@
  */
 using System;
 using System.Collections.Concurrent;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace UsingConcurrentBag
 {
@@ -16,15 +18,19 @@ namespace UsingConcurrentBag
 			Console.WriteLine("Hello World!");
 			
 			ConcurrentBag<int> bag = new ConcurrentBag<int>();
-			bag.Add(42);
-			bag.Add(21);
 			
-			int result;
-			if (bag.TryTake(out result))
-				Console.WriteLine(result);
+			Task.Run(() =>
+			{
+				bag.Add(42);
+				Thread.Sleep(1000);
+				bag.Add(21);
+			});
 			
-			if (bag.TryPeek(out result))
-				Console.WriteLine("There is a next item: {0}", result);
+			Task.Run(() =>
+			{
+				foreach (int i in bag)
+					Console.WriteLine(i);
+			}).Wait();
 			
 			Console.Write("Press any key to continue . . . ");
 			Console.ReadKey(true);
