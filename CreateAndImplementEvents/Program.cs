@@ -20,6 +20,8 @@ namespace CreateAndImplementEvents
 			
 			UsingLambdaExpressions();
 			
+			CreatingLambdaWithMultipleStatements();
+			
 			Console.Write("Press any key to continue . . . ");
 			Console.ReadKey(true);
 		}
@@ -77,6 +79,22 @@ namespace CreateAndImplementEvents
 			Console.WriteLine(calc(3,4));
 			calc = (x, y) => x * y;
 			Console.WriteLine(calc(3,4));
+		}
+		
+		#endregion
+		
+		#region -= Creating a lambda expression with multiple statements =-
+		
+		public static void CreatingLambdaWithMultipleStatements()
+		{
+			Console.WriteLine("Creating a lambda expression with multiple statements:");
+			Calculate calc = (x, y) =>
+			{
+				Console.WriteLine("Adding numbers");
+				return x + y;
+			};
+			int result = calc(3, 4);
+			Console.WriteLine(result);
 		}
 		
 		#endregion
