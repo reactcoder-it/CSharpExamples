@@ -22,6 +22,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SynchronizingResourcesExamp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImplementingProgramFlow", "ImplementingProgramFlow\ImplementingProgramFlow.csproj", "{46CB7A31-9399-46B3-B54D-A69915F225CF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreateAndImplementEvents", "CreateAndImplementEvents\CreateAndImplementEvents.csproj", "{AF1B64B4-E950-43CE-9ED9-ACA85EFFBAD9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -68,5 +70,9 @@ Global
 		{46CB7A31-9399-46B3-B54D-A69915F225CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{46CB7A31-9399-46B3-B54D-A69915F225CF}.Release|Any CPU.Build.0 = Release|Any CPU
 		{46CB7A31-9399-46B3-B54D-A69915F225CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF1B64B4-E950-43CE-9ED9-ACA85EFFBAD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF1B64B4-E950-43CE-9ED9-ACA85EFFBAD9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF1B64B4-E950-43CE-9ED9-ACA85EFFBAD9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF1B64B4-E950-43CE-9ED9-ACA85EFFBAD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 EndGlobal
