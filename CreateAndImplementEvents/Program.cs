@@ -116,14 +116,11 @@ namespace CreateAndImplementEvents
 	
 	public class Pub
 	{
-		public Action OnChange { get; set; }
+		public event Action OnChange = delegate {};
 		
 		public void Raise()
 		{
-			if (OnChange != null)
-			{
-				OnChange();
-			}
+			OnChange();
 		}
 	}
 }
