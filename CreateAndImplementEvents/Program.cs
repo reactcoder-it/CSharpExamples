@@ -22,6 +22,8 @@ namespace CreateAndImplementEvents
 			
 			CreatingLambdaWithMultipleStatements();
 			
+			CreateAndRaise();
+			
 			Console.Write("Press any key to continue . . . ");
 			Console.ReadKey(true);
 		}
@@ -98,5 +100,30 @@ namespace CreateAndImplementEvents
 		}
 		
 		#endregion
+		
+		#region -= Using an Action to expose an event =-
+		
+		public static void CreateAndRaise()
+		{
+			Pub p = new Pub();
+			p.OnChange += () => Console.WriteLine("Event raised to method 1");
+			p.OnChange += () => Console.WriteLine("Event raised to method 2");
+			p.Raise();
+		}
+		
+		#endregion
+	}
+	
+	public class Pub
+	{
+		public Action OnChange { get; set; }
+		
+		public void Raise()
+		{
+			if (OnChange != null)
+			{
+				OnChange();
+			}
+		}
 	}
 }
