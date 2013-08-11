@@ -12,24 +12,24 @@ namespace ExceptionHandling
 	{
 		public static void Main(string[] args)
 		{
-			while (true)
-			{
-				String s = Console.ReadLine();
-				//if (String.IsNullOrWhiteSpace(s)) break;
+			String s = Console.ReadLine();
+			//if (String.IsNullOrWhiteSpace(s)) break;
 				
-				try
-				{
-					int i = int.Parse(s);
-					break;
-				}
-				catch (ArgumentNullException)
-				{
-					Console.WriteLine("You need to enter a value");
-				}
-				catch (FormatException)
-				{
-					Console.WriteLine("{0} is not valid number. Please try again", s);
-				}
+			try
+			{
+				int i = int.Parse(s);
+			}
+			catch (ArgumentNullException)
+			{
+				Console.WriteLine("You need to enter a value");
+			}
+			catch (FormatException)
+			{
+				Console.WriteLine("{0} is not valid number. Please try again", s);
+			}
+			finally
+			{
+				Console.WriteLine("Program complete.");
 			}
 			
 			Console.Write("Press any key to continue . . . ");
