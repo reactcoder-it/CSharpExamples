@@ -106,8 +106,7 @@ namespace CreateAndImplementEvents
 		public static void CreateAndRaise()
 		{
 			Pub p = new Pub();
-			p.OnChange += () => Console.WriteLine("Event raised to method 1");
-			p.OnChange += () => Console.WriteLine("Event raised to method 2");
+			p.OnChange += (sender, e) => Console.WriteLine("Event raised: {0}", e.Value);
 			p.Raise();
 		}
 		
@@ -116,11 +115,21 @@ namespace CreateAndImplementEvents
 	
 	public class Pub
 	{
-		public event Action OnChange = delegate {};
+		public event EventHandler<MyArgs> OnChange = delegate {};
 		
 		public void Raise()
 		{
-			OnChange();
+			OnChange(this, new MyArgs(42));
 		}
+	}
+	
+	public class MyArgs : EventArgs
+	{
+		public MyArgs(int @value)
+		{
+			this.Value = @value;
+		}
+		
+		public int Value { get; set; }
 	}
 }
