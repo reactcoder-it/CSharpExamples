@@ -5,6 +5,7 @@
  * Time: 19:45
  */
 using System;
+using System.Collections.Generic;
 
 namespace ImplementingProgramFlow
 {
@@ -48,6 +49,8 @@ namespace ImplementingProgramFlow
 			}
 			Console.WriteLine();
 			
+			CannotChangeForeachIterationVariable();
+			
 			Console.Write("Press any key to continue . . . ");
 			Console.ReadKey(true);
 		}
@@ -61,5 +64,36 @@ namespace ImplementingProgramFlow
 			
 			return p ? 1 : 0;
 		}
+		
+		static void CannotChangeForeachIterationVariable()
+		{
+			var people = new List<Person>()
+			{
+				new Person() { FirstName = "John", LastName = "Doe" },
+				new Person() { FirstName = "Jane", LastName = "Doe" }
+			};
+			
+			foreach (Person p in people)
+			{
+				Console.WriteLine("Person before change: Firstname = {0}, Lastname = {1}", p.FirstName, p.LastName);
+			}
+			
+			foreach (Person p in people)
+			{
+				p.LastName = "Changed";
+				//p = new Person(); // Compile Error
+			}
+			
+			foreach (Person p in people)
+			{
+				Console.WriteLine("Person after change: Firstname = {0}, Lastname = {1}", p.FirstName, p.LastName);
+			}
+		}
+	}
+	
+	class Person
+	{
+		public String FirstName { get; set; }
+		public String LastName { get; set; }
 	}
 }
