@@ -15,12 +15,16 @@ namespace ExceptionHandling
 			while (true)
 			{
 				String s = Console.ReadLine();
-				if (String.IsNullOrWhiteSpace(s)) break;
+				//if (String.IsNullOrWhiteSpace(s)) break;
 				
 				try
 				{
 					int i = int.Parse(s);
 					break;
+				}
+				catch (ArgumentNullException)
+				{
+					Console.WriteLine("You need to enter a value");
 				}
 				catch (FormatException)
 				{
