@@ -9,7 +9,7 @@
     <AssemblyName>ExceptionHandling</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <StartupObject>ExceptionHandling.UsingEnvironmentFailFast</StartupObject>
+    <StartupObject>ExceptionHandling.InspectingException</StartupObject>
     <NoWin32Manifest>False</NoWin32Manifest>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
@@ -47,6 +47,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="InspectingException.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UsingEnvironmentFailFast.cs" />
