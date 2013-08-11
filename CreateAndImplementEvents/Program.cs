@@ -18,6 +18,8 @@ namespace CreateAndImplementEvents
 			
 			Multicast();
 			
+			UsingLambdaExpressions();
+			
 			Console.Write("Press any key to continue . . . ");
 			Console.ReadKey(true);
 		}
@@ -62,6 +64,19 @@ namespace CreateAndImplementEvents
 			
 			int invocationCount = d.GetInvocationList().GetLength(0);
 			Console.WriteLine(invocationCount);
+		}
+		
+		#endregion
+		
+		#region -= UsingLambdaExpressions =-
+		
+		public static void UsingLambdaExpressions()
+		{
+			Console.WriteLine("Example with lambda expressions:");
+			Calculate calc = (x, y) => x + y;
+			Console.WriteLine(calc(3,4));
+			calc = (x, y) => x * y;
+			Console.WriteLine(calc(3,4));
 		}
 		
 		#endregion
