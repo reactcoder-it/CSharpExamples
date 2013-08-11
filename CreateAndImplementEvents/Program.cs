@@ -5,6 +5,8 @@
  * Time: 13:13
  */
 using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace CreateAndImplementEvents
 {
@@ -106,8 +108,18 @@ namespace CreateAndImplementEvents
 		public static void CreateAndRaise()
 		{
 			Pub p = new Pub();
-			p.OnChange += (sender, e) => Console.WriteLine("Event raised: {0}", e.Value);
-			p.Raise();
+			p.OnChange += (sender, e) => Console.WriteLine("Subscriber 1 called");
+			p.OnChange += (sender, e) => { throw new Exception(); };
+			p.OnChange += (sender, e) => Console.WriteLine("Subscriber 3 called");
+			
+			try
+			{
+				p.Raise();
+			}
+			catch (AggregateException ex)
+			{
+				Console.WriteLine(ex.InnerExceptions.Count);
+			}
 		}
 		
 		#endregion
@@ -115,38 +127,27 @@ namespace CreateAndImplementEvents
 	
 	public class Pub
 	{
-		private event EventHandler<MyArgs> onChange = delegate {};
-		public event EventHandler<MyArgs> OnChange
-		{
-			add
-			{
-				lock (onChange)
-				{
-					onChange += value;
-				}
-			}
-			remove
-			{
-				lock (onChange)
-				{
-					onChange -= value;
-				}
-			}
-		}
+		public event EventHandler OnChange = delegate {};
 		
 		public void Raise()
 		{
-			onChange(this, new MyArgs(42));
+			var exceptions = new List<Exception>();
+			foreach (Delegate handler in OnChange.GetInvocationList())
+			{
+				try
+				{
+					handler.DynamicInvoke(this, EventArgs.Empty);
+				}
+				catch (Exception ex)
+				{
+					exceptions.Add(ex);
+				}
+			}
+			
+			if (exceptions.Any())
+			{
+				throw new AggregateException(exceptions);
+			}
 		}
-	}
-	
-	public class MyArgs : EventArgs
-	{
-		public MyArgs(int @value)
-		{
-			this.Value = @value;
-		}
-		
-		public int Value { get; set; }
 	}
 }
