@@ -115,11 +115,28 @@ namespace CreateAndImplementEvents
 	
 	public class Pub
 	{
-		public event EventHandler<MyArgs> OnChange = delegate {};
+		private event EventHandler<MyArgs> onChange = delegate {};
+		public event EventHandler<MyArgs> OnChange
+		{
+			add
+			{
+				lock (onChange)
+				{
+					onChange += value;
+				}
+			}
+			remove
+			{
+				lock (onChange)
+				{
+					onChange -= value;
+				}
+			}
+		}
 		
 		public void Raise()
 		{
-			OnChange(this, new MyArgs(42));
+			onChange(this, new MyArgs(42));
 		}
 	}
 	
