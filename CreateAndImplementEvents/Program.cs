@@ -10,6 +10,20 @@ namespace CreateAndImplementEvents
 {
 	class Program
 	{
+		public static void Main(string[] args)
+		{
+			Console.WriteLine("Hello World!");
+			
+			UseDelegate();
+			
+			Multicast();
+			
+			Console.Write("Press any key to continue . . . ");
+			Console.ReadKey(true);
+		}
+		
+		#region -= Using delegates =-
+		
 		public delegate int Calculate(int x, int y);
 		public static int Add(int x, int y) { return x + y; }
 		public static int Multiply(int x, int y) { return x * y; }
@@ -23,14 +37,33 @@ namespace CreateAndImplementEvents
 			Console.WriteLine(calc(3,4));
 		}
 		
-		public static void Main(string[] args)
+		#endregion
+		
+		#region -= Multicast Delegate =-
+		
+		public static void MethodOne()
 		{
-			Console.WriteLine("Hello World!");
-			
-			UseDelegate();
-			
-			Console.Write("Press any key to continue . . . ");
-			Console.ReadKey(true);
+			Console.WriteLine("MethodOne");
 		}
+		
+		public static void MethodTwo()
+		{
+			Console.WriteLine("MethodTwo");
+		}
+		
+		public delegate void Del();
+		
+		public static void Multicast()
+		{
+			Del d = MethodOne;
+			d += MethodTwo;
+			
+			d();
+			
+			int invocationCount = d.GetInvocationList().GetLength(0);
+			Console.WriteLine(invocationCount);
+		}
+		
+		#endregion
 	}
 }
