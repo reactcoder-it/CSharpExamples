@@ -28,6 +28,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExceptionHandling", "Except
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreateAndUseTypes", "CreateAndUseTypes\CreateAndUseTypes.csproj", "{D3D6F128-863F-478F-8D08-0CD51905733E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UsingGenericTypes", "UsingGenericTypes\UsingGenericTypes.csproj", "{68D6D47C-8449-4B69-A6B2-4E6329FA07E3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -86,5 +88,9 @@ Global
 		{D3D6F128-863F-478F-8D08-0CD51905733E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D3D6F128-863F-478F-8D08-0CD51905733E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D3D6F128-863F-478F-8D08-0CD51905733E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68D6D47C-8449-4B69-A6B2-4E6329FA07E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68D6D47C-8449-4B69-A6B2-4E6329FA07E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68D6D47C-8449-4B69-A6B2-4E6329FA07E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68D6D47C-8449-4B69-A6B2-4E6329FA07E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 EndGlobal
