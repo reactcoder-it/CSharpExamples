@@ -26,6 +26,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreateAndImplementEvents", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExceptionHandling", "ExceptionHandling\ExceptionHandling.csproj", "{1B419BDB-3572-4D53-92F0-F8A1B264E7F8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImplementingImplicitAndExplicitConversionOperator", "ImplementingImplicitAndExplicitConversionOperator\ImplementingImplicitAndExplicitConversionOperator.csproj", "{1C0ADE84-3953-48CD-BB11-CFB7CF5A71F6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -80,5 +82,9 @@ Global
 		{1B419BDB-3572-4D53-92F0-F8A1B264E7F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1B419BDB-3572-4D53-92F0-F8A1B264E7F8}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1B419BDB-3572-4D53-92F0-F8A1B264E7F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C0ADE84-3953-48CD-BB11-CFB7CF5A71F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C0ADE84-3953-48CD-BB11-CFB7CF5A71F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C0ADE84-3953-48CD-BB11-CFB7CF5A71F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C0ADE84-3953-48CD-BB11-CFB7CF5A71F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 EndGlobal
