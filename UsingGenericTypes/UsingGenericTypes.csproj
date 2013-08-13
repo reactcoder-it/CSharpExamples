@@ -57,6 +57,7 @@
   <ItemGroup>
     <Compile Include="CreatingExtensionMethod.cs" />
     <Compile Include="MyClass.cs" />
+    <Compile Include="OverridingVirtualMethod.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
