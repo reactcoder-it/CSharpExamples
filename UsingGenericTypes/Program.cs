@@ -14,7 +14,9 @@ namespace UsingGenericTypes
 		{
 			Console.WriteLine("Hello World!");
 			
-			// TODO: Implement Functionality Here
+			Product p = new Product();
+			p.Price = 1000;
+			Console.WriteLine(p.Discount());
 			
 			Console.Write("Press any key to continue . . . ");
 			Console.ReadKey(true);
