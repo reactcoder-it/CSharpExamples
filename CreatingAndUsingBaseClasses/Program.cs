@@ -105,6 +105,11 @@ namespace CreatingAndUsingBaseClasses
 				Console.WriteLine(order);
 			}
 			
+			List<int> numbers = new List<int> { 1, 2, 3, 5, 7, 9 };
+			using (List<int>.Enumerator enumerator = numbers.GetEnumerator()) {
+				while (enumerator.MoveNext()) Console.WriteLine(enumerator.Current);
+			}
+			
 			Console.Write("Press any key to continue . . . ");
 			Console.ReadKey(true);
 		}
