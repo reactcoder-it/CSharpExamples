@@ -27,9 +27,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExceptionHandling", "ExceptionHandling\ExceptionHandling.csproj", "{1B419BDB-3572-4D53-92F0-F8A1B264E7F8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImplementingImplicitAndExplicitConversionOperator", "ImplementingImplicitAndExplicitConversionOperator\ImplementingImplicitAndExplicitConversionOperator.csproj", "{1C0ADE84-3953-48CD-BB11-CFB7CF5A71F6}"
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreateAndUseTypes", "CreateAndUseTypes\CreateAndUseTypes.csproj", "{D3D6F128-863F-478F-8D08-0CD51905733E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UsingGenericTypes", "UsingGenericTypes\UsingGenericTypes.csproj", "{68D6D47C-8449-4B69-A6B2-4E6329FA07E3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreatingAndUsingBaseClasses", "CreatingAndUsingBaseClasses\CreatingAndUsingBaseClasses.csproj", "{3F6699E6-1A00-40B9-A4F0-13BE69E13B62}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -89,13 +90,13 @@ Global
 		{1C0ADE84-3953-48CD-BB11-CFB7CF5A71F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1C0ADE84-3953-48CD-BB11-CFB7CF5A71F6}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1C0ADE84-3953-48CD-BB11-CFB7CF5A71F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D3D6F128-863F-478F-8D08-0CD51905733E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D3D6F128-863F-478F-8D08-0CD51905733E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D3D6F128-863F-478F-8D08-0CD51905733E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D3D6F128-863F-478F-8D08-0CD51905733E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{68D6D47C-8449-4B69-A6B2-4E6329FA07E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{68D6D47C-8449-4B69-A6B2-4E6329FA07E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{68D6D47C-8449-4B69-A6B2-4E6329FA07E3}.Release|Any CPU.Build.0 = Release|Any CPU
 		{68D6D47C-8449-4B69-A6B2-4E6329FA07E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F6699E6-1A00-40B9-A4F0-13BE69E13B62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F6699E6-1A00-40B9-A4F0-13BE69E13B62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F6699E6-1A00-40B9-A4F0-13BE69E13B62}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F6699E6-1A00-40B9-A4F0-13BE69E13B62}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 EndGlobal
