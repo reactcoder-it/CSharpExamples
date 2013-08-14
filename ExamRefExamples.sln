@@ -34,6 +34,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreatingAndUsingBaseClasses
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UsingCodeDomForGenerationOfCode", "UsingCodeDomForGenerationOfCode\UsingCodeDomForGenerationOfCode.csproj", "{3D6BA6CF-4E98-4652-B1F8-A1C56B74E3A5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImplementingIDisposableAndFinalizer", "ImplementingIDisposableAndFinalizer\ImplementingIDisposableAndFinalizer.csproj", "{07F10ABC-FE59-4A3C-84EE-234086AAC0F5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -104,5 +106,9 @@ Global
 		{3D6BA6CF-4E98-4652-B1F8-A1C56B74E3A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{3D6BA6CF-4E98-4652-B1F8-A1C56B74E3A5}.Release|Any CPU.Build.0 = Release|Any CPU
 		{3D6BA6CF-4E98-4652-B1F8-A1C56B74E3A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07F10ABC-FE59-4A3C-84EE-234086AAC0F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07F10ABC-FE59-4A3C-84EE-234086AAC0F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07F10ABC-FE59-4A3C-84EE-234086AAC0F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07F10ABC-FE59-4A3C-84EE-234086AAC0F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 EndGlobal
