@@ -35,6 +35,22 @@ namespace CreatingAndUsingBaseClasses
 		}
 	}
 	
+	abstract class Base2
+	{
+		public virtual void MethodWithImplementation()
+		{
+		}
+		
+		public abstract void AbstractMethod();
+	}
+	
+	class Derived2 : Base2
+	{
+		public override void AbstractMethod()
+		{
+		}
+	}
+	
 	class Program
 	{
 		public static void Main(string[] args)
