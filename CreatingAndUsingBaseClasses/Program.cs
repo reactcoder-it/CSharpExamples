@@ -6,6 +6,8 @@
  */
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.Reflection;
 
 namespace CreatingAndUsingBaseClasses
 {
@@ -96,6 +98,27 @@ namespace CreatingAndUsingBaseClasses
 	{
 		public string FirstName { get; set; }
 		public string LastName { get; set; }
+		
+		[Conditional("CONDITION1"), Conditional("CONDITION2")]
+		static void MyMethod()
+		{
+		}
+	}
+	
+	[AttributeUsage(AttributeTargets.Class, AllowMultiple = true)]
+	class MyMultipleUsageAttribute : Attribute
+	{
+	}
+	
+	[AttributeUsage(AttributeTargets.Class | AttributeTargets.Method, AllowMultiple = true)]
+	class CompleteCustomAttribute : Attribute
+	{
+		public CompleteCustomAttribute(string description)
+		{
+			Description = description;
+		}
+		
+		public string Description { get; set; }
 	}
 	
 	class Program
@@ -131,6 +154,23 @@ namespace CreatingAndUsingBaseClasses
 			using (List<int>.Enumerator enumerator = numbers.GetEnumerator()) {
 				while (enumerator.MoveNext()) Console.WriteLine(enumerator.Current);
 			}
+			
+			/* Проверка применения атрибута */
+			if (!Attribute.IsDefined(typeof(Person), typeof(SerializableAttribute)))
+				Console.WriteLine("Yes");
+			if (Attribute.IsDefined(typeof(Person2), typeof(SerializableAttribute)))
+				Console.WriteLine("Yes");
+			
+			/* Определение параметров аттрибута */
+//			ConditionalAttribute conditionalAttribute = (ConditionalAttribute)Attribute.GetCustomAttribute(typeof(Person2), typeof(ConditionalAttribute));
+//			string condition = conditionalAttribute.ConditionString;
+//			Console.WriteLine(condition);
+			
+			/* Рефлексивное получение метода и выполнение его */
+			int i = 42;
+			MethodInfo compareToMethod = i.GetType().GetMethod("CompareTo", new Type[] { typeof(int) });
+			int result = (int)compareToMethod.Invoke(i, new Object[] { 41 });
+			Console.WriteLine(i);
 			
 			Console.Write("Press any key to continue . . . ");
 			Console.ReadKey(true);
