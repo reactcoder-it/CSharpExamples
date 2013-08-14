@@ -76,6 +76,28 @@ namespace CreatingAndUsingBaseClasses
 		}
 	}
 	
+	class Person
+	{
+		public Person(string firstName, string lastName)
+		{
+		}
+		
+		public string FirstName { get; set; }
+		public string LastName { get; set; }
+		
+		public override string ToString()
+		{
+			return string.Format("[Person FirstName={0}, LastName={1}]", FirstName, LastName);
+		}
+	}
+	
+	[Serializable]
+	class Person2
+	{
+		public string FirstName { get; set; }
+		public string LastName { get; set; }
+	}
+	
 	class Program
 	{
 		public static void Main(string[] args)
