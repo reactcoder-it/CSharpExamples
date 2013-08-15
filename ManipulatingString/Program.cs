@@ -75,6 +75,8 @@ namespace ManipulatingString
 			foreach (string name in names)
 				Console.WriteLine(Regex.Replace(name, pattern, String.Empty));
 			
+			foreach (string word in "My sentence separated by spaces".Split(' '))
+				Console.WriteLine(word);
 			
 			Console.Write("Press any key to continue . . . ");
 			Console.ReadKey(true);
