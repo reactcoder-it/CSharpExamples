@@ -5,12 +5,40 @@
  * Time: 8:09
  */
 using System;
+using System.Globalization;
+using System.IO;
 using System.Text;
+using System.Xml;
 
 namespace ManipulatingString
 {
 	class Program
 	{
+		static String GetXmlString()
+		{
+			var stringWriter = new StringWriter();
+			using (XmlWriter writer = XmlWriter.Create(stringWriter))
+			{
+				writer.WriteStartElement("book");
+				writer.WriteElementString("price", "19.95");
+				writer.WriteEndElement();
+				writer.Flush();
+			}
+			return stringWriter.ToString();
+		}
+		
+		static decimal ReadPrice(string xml)
+		{
+			var stringReader = new StringReader(xml);
+			decimal price = 0;
+			using (XmlReader reader = XmlReader.Create(stringReader))
+			{
+				reader.ReadToFollowing("price");
+				price = decimal.Parse(reader.ReadInnerXml(), new CultureInfo("en-US"));
+			}
+			return price;
+		}
+		
 		public static void Main(string[] args)
 		{
 			Console.WriteLine("Hello World!");
@@ -35,6 +63,10 @@ namespace ManipulatingString
 			}
 			
 			Console.WriteLine(sb.ToString());
+			
+			Console.WriteLine("\n" + GetXmlString());
+			Console.WriteLine("\n" + ReadPrice(GetXmlString()));
+			
 			
 			Console.Write("Press any key to continue . . . ");
 			Console.ReadKey(true);
