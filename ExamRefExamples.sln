@@ -36,6 +36,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UsingCodeDomForGenerationOf
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImplementingIDisposableAndFinalizer", "ImplementingIDisposableAndFinalizer\ImplementingIDisposableAndFinalizer.csproj", "{07F10ABC-FE59-4A3C-84EE-234086AAC0F5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManipulatingString", "ManipulatingString\ManipulatingString.csproj", "{8C42622A-1019-45CA-8BAF-F2C976CA782F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -110,5 +112,9 @@ Global
 		{07F10ABC-FE59-4A3C-84EE-234086AAC0F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{07F10ABC-FE59-4A3C-84EE-234086AAC0F5}.Release|Any CPU.Build.0 = Release|Any CPU
 		{07F10ABC-FE59-4A3C-84EE-234086AAC0F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C42622A-1019-45CA-8BAF-F2C976CA782F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C42622A-1019-45CA-8BAF-F2C976CA782F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C42622A-1019-45CA-8BAF-F2C976CA782F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C42622A-1019-45CA-8BAF-F2C976CA782F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 EndGlobal
