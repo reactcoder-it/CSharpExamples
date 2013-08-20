@@ -11,9 +11,8 @@ namespace GeneratePrimesExample
 {
 	public class GeneratePrimes
 	{
-		private static int s;
-		private static bool[] f;
-		private static int[] primes;
+		private static bool[] isCrossed;
+		private static int[] result;
 		
 		public static int[] GeneratePrimeNumbers(int maxValue)
 		{
@@ -21,58 +20,68 @@ namespace GeneratePrimesExample
 				return new int[0];
 			else
 			{
-				InitializeSieve(maxValue);
-				Sieve();
-				LoadPrimes();
-				return primes;
+				InitializeArrayOfIntegers(maxValue);
+				CrossOutMultiples();
+				PutUncrossedIntegersIntoResult();
+				return result;
 			}
 		}
 		
-		private static void LoadPrimes()
+		static void PutUncrossedIntegersIntoResult()
 		{
-			int j;
-			int i;
-			
-			int count = 0;
-			for (i=0; i<s; i++)
+			result = new int[NumberOfUncrossedIntegers()];
+			for (int j=0, i=2; i<isCrossed.Length; i++)
 			{
-				if (f[i])
+				if (NotCrossed(i))
+					result[j++] = i;
+			}
+		}
+		
+		static int NumberOfUncrossedIntegers()
+		{
+			int count = 0;
+			for (int i=2; i<isCrossed.Length; i++)
+			{
+				if (NotCrossed(i))
 					count++;
 			}
-			
-			primes = new int[count];
-			for(i=0, j=0; i<s; i++)
+			return count;
+		}
+		
+		static void CrossOutMultiples()
+		{
+			int maxPrimeFactor = CalcMaxPrimeFactor();
+			for (int i=2; i<maxPrimeFactor + 1; i++)
 			{
-				if (f[i])
-					primes[j++] = i;
+				if (NotCrossed(i))
+					CrossOutMultiplesOf(i);
 			}
 		}
 		
-		private static void Sieve()
+		static void CrossOutMultiplesOf(int i)
 		{
-			int i;
-			int j;
-			
-			for (i=2; i<Math.Sqrt(s) + 1; i++)
-			{
-				if (f[i])
-				{
-					for (j=2*i; j<s; j+=i)
-						f[j] = false;
-				}
-			}
+			for (int multiple = 2*i; multiple < isCrossed.Length; multiple += i)
+				isCrossed[multiple] = true;
 		}
 		
-		private static void InitializeSieve(int maxValue)
+		static bool NotCrossed(int i)
 		{
-			s = maxValue + 1;
-			f = new bool[s];
+			return isCrossed[i] == false;
+		}
+		
+		static int CalcMaxPrimeFactor()
+		{
+			double maxPrimeFactor = Math.Sqrt(isCrossed.Length) + 1;
+			return (int)maxPrimeFactor;
+		}
+		
+		public static void InitializeArrayOfIntegers(int maxValue)
+		{
 			int i;
 			
-			for (i=0; i<s; i++)
-				f[i] = true;
-			
-			f[0] = f[1] = false;
+			isCrossed = new bool[maxValue + 1];
+			for (i=2; i<isCrossed.Length; i++)
+				isCrossed[i] = false;
 		}
 	}
 	
