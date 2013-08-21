@@ -19,6 +19,10 @@ namespace BowlingGame
 		bool isFirstThrow = true;
 		int currentFrame = 1;
 		
+		int ball;
+		int firstThrow;
+		int secondThrow;
+		
 		public int Score { get { return ScoreForFrame(CurrentFrame - 1); } }
 		public int CurrentFrame { get { return currentFrame; } }
 		
@@ -50,18 +54,18 @@ namespace BowlingGame
 		
 		public int ScoreForFrame(int theFrame)
 		{
-			int ball = 0;
+			ball = 0;
 			int score = 0;
 			for (int currentFrame=0; currentFrame<theFrame; currentFrame++)
 			{
-				int firstThrow = throws[ball++];
+				firstThrow = throws[ball++];
 				if (firstThrow == 10)
 				{
 					score += 10 + throws[ball] + throws[ball+1];
 				}
 				else
 				{
-					int secondThrow = throws[ball++];
+					secondThrow = throws[ball++];
 					int frameScore = firstThrow + secondThrow;
 					
 					// Для обработки спэа необходим первый бросок в следующем фрейме.
