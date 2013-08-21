@@ -22,5 +22,13 @@ namespace BowlingGame.UnitTests
 			f.Add(5);
 			Assert.AreEqual(5, f.Score);
 		}
+		
+		[Test]
+		public void TestOneThrow()
+		{
+			Game game = new Game();
+			game.Add(5);
+			Assert.AreEqual(5, game.Score);
+		}
 	}
 }
