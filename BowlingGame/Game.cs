@@ -36,16 +36,20 @@ namespace BowlingGame
 			if (isFirstThrow)
 			{
 				if (pins == 10)
-					currentFrame++;
+					AdvanceFrame();
 				else
 					isFirstThrow = false;
 			}
 			else
 			{
 				isFirstThrow = true;
-				currentFrame++;
+				AdvanceFrame();
 			}
-			
+		}
+		
+		void AdvanceFrame()
+		{
+			currentFrame++;
 			if (currentFrame > 11) currentFrame = 11;
 		}
 	}
