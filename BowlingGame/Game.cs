@@ -62,7 +62,7 @@ namespace BowlingGame
 				if (Strike())
 				{
 					ball++;
-					score += 10 + NextToBalls;
+					score += 10 + NextTwoBalls;
 				}
 				else
 				{
@@ -72,7 +72,7 @@ namespace BowlingGame
 			return score;
 		}
 		
-		int NextToBalls
+		int NextTwoBalls
 		{
 			get { return throws[ball] + throws[ball+1]; }
 		}
