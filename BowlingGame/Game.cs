@@ -16,10 +16,11 @@ namespace BowlingGame
 		int score;
 		int[] throws = new int[21];
 		int currentThrow;
-		int currentFrame;
 		bool isFirstThrow = true;
 		
 		public int Score { get { return score; } }
+		
+		int currentFrame = 1;
 		public int CurrentFrame { get { return currentFrame; } }
 		
 		public void Add(int pins)
@@ -27,6 +28,11 @@ namespace BowlingGame
 			throws[currentThrow++] = pins;
 			score += pins;
 			
+			AdjustCurrentFrame();
+		}
+		
+		void AdjustCurrentFrame()
+		{
 			if (isFirstThrow)
 			{
 				isFirstThrow = false;
