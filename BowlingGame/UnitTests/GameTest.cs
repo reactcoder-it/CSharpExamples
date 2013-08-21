@@ -49,7 +49,7 @@ namespace BowlingGame.UnitTests
 			game.Add(7);
 			game.Add(3);
 			Assert.AreEqual(13, game.ScoreForFrame(1));
-			Assert.AreEqual(3, game.CurrentFrame);
+			Assert.AreEqual(2, game.CurrentFrame);
 		}
 		
 		[Test]
@@ -74,6 +74,18 @@ namespace BowlingGame.UnitTests
 			Assert.AreEqual(19, game.ScoreForFrame(1));
 			Assert.AreEqual(28, game.Score);
 			Assert.AreEqual(3, game.CurrentFrame);
+		}
+		
+		[Test]
+		public void TestPerfectGame()
+		{
+			for (int i=0; i<12; i++)
+			{
+				game.Add(10);
+			}
+			
+			Assert.AreEqual(300, game.Score);
+			Assert.AreEqual(10, game.CurrentFrame);
 		}
 	}
 }

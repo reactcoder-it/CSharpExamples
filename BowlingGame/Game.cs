@@ -17,10 +17,9 @@ namespace BowlingGame
 		int[] throws = new int[21];
 		int currentThrow;
 		bool isFirstThrow = true;
+		int currentFrame = 1;
 		
 		public int Score { get { return ScoreForFrame(CurrentFrame - 1); } }
-		
-		int currentFrame = 1;
 		public int CurrentFrame { get { return currentFrame; } }
 		
 		public void Add(int pins)
@@ -28,18 +27,23 @@ namespace BowlingGame
 			throws[currentThrow++] = pins;
 			score += pins;
 			
-			AdjustCurrentFrame();
+			AdjustCurrentFrame(pins);
 		}
 		
-		void AdjustCurrentFrame()
+		void AdjustCurrentFrame(int pins)
 		{
 			if (isFirstThrow)
 			{
-				isFirstThrow = false;
-				currentFrame++;
+				if (pins == 10)
+					currentFrame++;
+				else
+					isFirstThrow = false;
 			}
 			else
+			{
 				isFirstThrow = true;
+				currentFrame++;
+			}
 		}
 		
 		public int ScoreForFrame(int theFrame)
@@ -49,15 +53,21 @@ namespace BowlingGame
 			for (int currentFrame=0; currentFrame<theFrame; currentFrame++)
 			{
 				int firstThrow = throws[ball++];
-				int secondThrow = throws[ball++];
-				
-				int frameScore = firstThrow + secondThrow;
-				
-				// Для обработки спэа необходим первый бросок в следующем фрейме.
-				if (frameScore == 10)
-					score += frameScore + throws[ball];
+				if (firstThrow == 10)
+				{
+					score += 10 + throws[ball] + throws[ball+1];
+				}
 				else
-					score += frameScore;
+				{
+					int secondThrow = throws[ball++];
+					int frameScore = firstThrow + secondThrow;
+					
+					// Для обработки спэа необходим первый бросок в следующем фрейме.
+					if (frameScore == 10)
+						score += frameScore + throws[ball];
+					else
+						score += frameScore;
+				}
 			}
 			return score;
 		}
