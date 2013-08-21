@@ -64,7 +64,7 @@ namespace BowlingGame.UnitTests
 			game.Add(3);
 			game.Add(2);
 			Assert.AreEqual(13, game.ScoreForFrame(1));
-			Assert.AreEqual(18, game.Score);
+			Assert.AreEqual(18, game.ScoreForFrame(2));
 		}
 	}
 }
