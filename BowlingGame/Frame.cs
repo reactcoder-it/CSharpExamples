@@ -13,13 +13,16 @@ namespace BowlingGame
 	/// </summary>
 	public class Frame
 	{
+		int score;
+		
 		public int Score
 		{
-			get { return 0; }
+			get { return score; }
 		}
 		
 		public void Add(int pins)
 		{
+			score += pins;
 		}
 	}
 }
