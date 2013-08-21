@@ -89,10 +89,10 @@ namespace BowlingGame
 			int frameScore = firstThrow + secondThrow;
 			
 			// Для обработки спэа необходим первый бросок в следующем фрейме.
-			if (frameScore == 10)
+			if (Spare())
 			{
 				ball += 2;
-				score += frameScore + throws[ball];
+				score += 10 + NextBall;
 			}
 			else
 			{
@@ -101,6 +101,16 @@ namespace BowlingGame
 			}
 			
 			return score;
+		}
+		
+		int NextBall
+		{
+			get { return throws[ball]; }
+		}
+		
+		bool Spare()
+		{
+			return throws[ball] + throws[ball+1] == 10;
 		}
 	}
 }
