@@ -65,16 +65,24 @@ namespace BowlingGame
 				}
 				else
 				{
-					secondThrow = throws[ball++];
-					int frameScore = firstThrow + secondThrow;
-					
-					// Для обработки спэа необходим первый бросок в следующем фрейме.
-					if (frameScore == 10)
-						score += frameScore + throws[ball];
-					else
-						score += frameScore;
+					score += HandleSecondThrow();
 				}
 			}
+			return score;
+		}
+		
+		int HandleSecondThrow()
+		{
+			int score = 0;
+			secondThrow = throws[ball++];
+			int frameScore = firstThrow + secondThrow;
+			
+			// Для обработки спэа необходим первый бросок в следующем фрейме.
+			if (frameScore == 10)
+				score += frameScore + throws[ball];
+			else
+				score += frameScore;
+			
 			return score;
 		}
 	}
