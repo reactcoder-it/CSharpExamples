@@ -14,17 +14,25 @@ namespace BowlingGame
 	public class Game
 	{
 		int score;
+		int[] throws = new int[21];
+		int currentThrow;
 		
 		public int Score { get { return score; } }
 		
 		public void Add(int pins)
 		{
+			throws[currentThrow++] = pins;
 			score += pins;
 		}
 		
 		public int ScoreForFrame(int frame)
 		{
-			return 0;
+			int score = 0;
+			for (int ball=0; frame>0 && ball<currentThrow; ball+=2, frame--)
+			{
+				score += throws[ball] + throws[ball + 1];
+			}
+			return score;
 		}
 	}
 }
