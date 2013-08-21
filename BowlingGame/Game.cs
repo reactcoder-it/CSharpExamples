@@ -38,7 +38,7 @@ namespace BowlingGame
 				
 				// Для обработки спэа необходим первый бросок в следующем фрейме.
 				if (frameScore == 10)
-					score += frameScore + throws[ball++];
+					score += frameScore + throws[ball];
 				else
 					score += frameScore;
 			}
