@@ -14,21 +14,23 @@ namespace BowlingGame
 	public class Game
 	{
 		int score;
-		int[] throws = new int[21];
-		int currentThrow;
 		bool isFirstThrow = true;
 		int currentFrame = 1;
-		int ball;
+		Scorer scorer = new Scorer();
 		
 		public int Score { get { return ScoreForFrame(CurrentFrame - 1); } }
 		public int CurrentFrame { get { return currentFrame; } }
 		
 		public void Add(int pins)
 		{
-			throws[currentThrow++] = pins;
+			scorer.AddThrow(pins);
 			score += pins;
-			
 			AdjustCurrentFrame(pins);
+		}
+		
+		public int ScoreForFrame(int theFrame)
+		{
+			return scorer.ScoreForFrame(theFrame);
 		}
 		
 		void AdjustCurrentFrame(int pins)
@@ -47,53 +49,6 @@ namespace BowlingGame
 			}
 			
 			if (currentFrame > 11) currentFrame = 11;
-		}
-		
-		public int ScoreForFrame(int theFrame)
-		{
-			ball = 0;
-			int score = 0;
-			for (int currentFrame=0; currentFrame<theFrame; currentFrame++)
-			{
-				if (Strike())
-				{
-					score += 10 + NextTwoBallsForStrike;
-					ball++;
-				}
-				else if (Spare())
-				{
-					score += 10 + NextBallForSpare;
-					ball += 2;
-				}
-				else
-				{
-					score += TwoBallsInFrame;
-					ball += 2;
-				}
-			}
-			return score;
-		}
-		
-		int NextTwoBallsForStrike
-		{
-			get { return throws[ball+1] + throws[ball+2]; }
-		}
-		
-		bool Strike()
-		{
-			return throws[ball] == 10;
-		}
-		
-		int TwoBallsInFrame { get { return throws[ball] + throws[ball+1]; } }
-		
-		int NextBallForSpare
-		{
-			get { return throws[ball+2]; }
-		}
-		
-		bool Spare()
-		{
-			return throws[ball] + throws[ball+1] == 10;
 		}
 	}
 }
