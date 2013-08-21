@@ -44,6 +44,8 @@ namespace BowlingGame
 				isFirstThrow = true;
 				currentFrame++;
 			}
+			
+			if (currentFrame > 10) currentFrame = 10;
 		}
 		
 		public int ScoreForFrame(int theFrame)
