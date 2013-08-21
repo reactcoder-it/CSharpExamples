@@ -33,7 +33,14 @@ namespace BowlingGame
 			{
 				int firstThrow = throws[ball++];
 				int secondThrow = throws[ball++];
-				score += firstThrow + secondThrow;
+				
+				int frameScore = firstThrow + secondThrow;
+				
+				// Для обработки спэа необходим первый бросок в следующем фрейме.
+				if (frameScore == 10)
+					score += frameScore + throws[ball++];
+				else
+					score += frameScore;
 			}
 			return score;
 		}
