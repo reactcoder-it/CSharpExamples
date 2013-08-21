@@ -19,7 +19,8 @@ namespace BowlingGame.UnitTests
 		public void TestScoreNoThrows()
 		{
 			Frame f = new Frame();
-			Assert.AreEqual(0, f.Score);
+			f.Add(5);
+			Assert.AreEqual(5, f.Score);
 		}
 	}
 }
