@@ -18,7 +18,7 @@ namespace BowlingGame
 		int currentThrow;
 		bool isFirstThrow = true;
 		
-		public int Score { get { return score; } }
+		public int Score { get { return ScoreForFrame(CurrentFrame - 1); } }
 		
 		int currentFrame = 1;
 		public int CurrentFrame { get { return currentFrame; } }

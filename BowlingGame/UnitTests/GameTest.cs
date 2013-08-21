@@ -19,14 +19,6 @@ namespace BowlingGame.UnitTests
 		
 		[SetUp]
 		public void SetUp() { game = new Game(); }
-
-		[Test]
-		public void TestOneThrow()
-		{
-			game.Add(5);
-			Assert.AreEqual(5, game.Score);
-			Assert.AreEqual(2, game.CurrentFrame);
-		}
 		
 		[Test]
 		public void TestTwoThrowsNoMark()
@@ -57,6 +49,7 @@ namespace BowlingGame.UnitTests
 			game.Add(7);
 			game.Add(3);
 			Assert.AreEqual(13, game.ScoreForFrame(1));
+			Assert.AreEqual(3, game.CurrentFrame);
 		}
 		
 		[Test]
@@ -68,6 +61,8 @@ namespace BowlingGame.UnitTests
 			game.Add(2);
 			Assert.AreEqual(13, game.ScoreForFrame(1));
 			Assert.AreEqual(18, game.ScoreForFrame(2));
+			Assert.AreEqual(18, game.Score);
+			Assert.AreEqual(3, game.CurrentFrame);
 		}
 	}
 }
