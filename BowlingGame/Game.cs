@@ -35,9 +35,7 @@ namespace BowlingGame
 		{
 			if (isFirstThrow)
 			{
-				if (pins == 10)
-					AdvanceFrame();
-				else
+				if (AdjustFrameForStrike(pins) == false)
 					isFirstThrow = false;
 			}
 			else
@@ -45,6 +43,16 @@ namespace BowlingGame
 				isFirstThrow = true;
 				AdvanceFrame();
 			}
+		}
+		
+		bool AdjustFrameForStrike(int pins)
+		{
+			if (pins == 10)
+			{
+				AdvanceFrame();
+				return true;
+			}
+			return false;
 		}
 		
 		void AdvanceFrame()
