@@ -57,13 +57,13 @@ namespace BowlingGame
 			{
 				if (Strike())
 				{
+					score += 10 + NextTwoBallsForStrike;
 					ball++;
-					score += 10 + NextTwoBalls;
 				}
 				else if (Spare())
 				{
+					score += 10 + NextBallForSpare;
 					ball += 2;
-					score += 10 + NextBall;
 				}
 				else
 				{
@@ -74,9 +74,9 @@ namespace BowlingGame
 			return score;
 		}
 		
-		int NextTwoBalls
+		int NextTwoBallsForStrike
 		{
-			get { return throws[ball] + throws[ball+1]; }
+			get { return throws[ball+1] + throws[ball+2]; }
 		}
 		
 		bool Strike()
@@ -86,9 +86,9 @@ namespace BowlingGame
 		
 		int TwoBallsInFrame { get { return throws[ball] + throws[ball+1]; } }
 		
-		int NextBall
+		int NextBallForSpare
 		{
-			get { return throws[ball]; }
+			get { return throws[ball+2]; }
 		}
 		
 		bool Spare()
