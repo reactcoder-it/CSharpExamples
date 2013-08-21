@@ -13,20 +13,16 @@ namespace BowlingGame.UnitTests
 	/// Description of FrameTest.
 	/// </summary>
 	[TestFixture]
-	public class FrameTest
+	public class GameTest
 	{
-		[Test]
-		public void TestScoreNoThrows()
-		{
-			Frame f = new Frame();
-			f.Add(5);
-			Assert.AreEqual(5, f.Score);
-		}
+		Game game;
 		
+		[SetUp]
+		public void SetUp() { game = new Game(); }
+
 		[Test]
 		public void TestOneThrow()
 		{
-			Game game = new Game();
 			game.Add(5);
 			Assert.AreEqual(5, game.Score);
 		}
@@ -34,7 +30,6 @@ namespace BowlingGame.UnitTests
 		[Test]
 		public void TestTwoThrowsNoMark()
 		{
-			Game game = new Game();
 			game.Add(5);
 			game.Add(4);
 			Assert.AreEqual(9, game.Score);
@@ -43,7 +38,6 @@ namespace BowlingGame.UnitTests
 		[Test]
 		public void TestFourThrowsNoMark()
 		{
-			Game game = new Game();
 			game.Add(5);
 			game.Add(4);
 			game.Add(7);
@@ -52,5 +46,8 @@ namespace BowlingGame.UnitTests
 			Assert.AreEqual(9, game.ScoreForFrame(1));
 			Assert.AreEqual(18, game.ScoreForFrame(2));
 		}
+		
+		[Test]
+		public void TestSimpleSpare() { }
 	}
 }
