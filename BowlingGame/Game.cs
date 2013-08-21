@@ -13,10 +13,13 @@ namespace BowlingGame
 	/// </summary>
 	public class Game
 	{
-		public int Score { get { return 0; } }
+		int score;
+		
+		public int Score { get { return score; } }
 		
 		public void Add(int pins)
 		{
+			score += pins;
 		}
 	}
 }
