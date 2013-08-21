@@ -45,7 +45,7 @@ namespace BowlingGame
 				currentFrame++;
 			}
 			
-			if (currentFrame > 10) currentFrame = 10;
+			if (currentFrame > 11) currentFrame = 11;
 		}
 		
 		public int ScoreForFrame(int theFrame)
