@@ -18,7 +18,7 @@ namespace BowlingGame
 			get { return 0; }
 		}
 		
-		public void Add(Throw t)
+		public void Add(int pins)
 		{
 		}
 	}
