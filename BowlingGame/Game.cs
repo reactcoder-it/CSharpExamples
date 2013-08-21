@@ -58,10 +58,11 @@ namespace BowlingGame
 			int score = 0;
 			for (int currentFrame=0; currentFrame<theFrame; currentFrame++)
 			{
-				firstThrow = throws[ball++];
-				if (firstThrow == 10)
+				firstThrow = throws[ball];
+				if (Strike())
 				{
-					score += 10 + throws[ball] + throws[ball+1];
+					ball++;
+					score += 10 + NextToBalls;
 				}
 				else
 				{
@@ -71,17 +72,33 @@ namespace BowlingGame
 			return score;
 		}
 		
+		int NextToBalls
+		{
+			get { return throws[ball] + throws[ball+1]; }
+		}
+		
+		bool Strike()
+		{
+			return throws[ball] == 10;
+		}
+		
 		int HandleSecondThrow()
 		{
 			int score = 0;
-			secondThrow = throws[ball++];
+			secondThrow = throws[ball + 1];
 			int frameScore = firstThrow + secondThrow;
 			
 			// Для обработки спэа необходим первый бросок в следующем фрейме.
 			if (frameScore == 10)
+			{
+				ball += 2;
 				score += frameScore + throws[ball];
+			}
 			else
+			{
+				ball += 2;
 				score += frameScore;
+			}
 			
 			return score;
 		}
