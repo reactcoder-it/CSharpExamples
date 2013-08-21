@@ -13,7 +13,6 @@ namespace BowlingGame
 	/// </summary>
 	public class Game
 	{
-		int score;
 		bool isFirstThrow = true;
 		int currentFrame = 1;
 		Scorer scorer = new Scorer();
@@ -24,7 +23,6 @@ namespace BowlingGame
 		public void Add(int pins)
 		{
 			scorer.AddThrow(pins);
-			score += pins;
 			AdjustCurrentFrame(pins);
 		}
 		
