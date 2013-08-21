@@ -60,9 +60,15 @@ namespace BowlingGame
 					ball++;
 					score += 10 + NextTwoBalls;
 				}
+				else if (Spare())
+				{
+					ball += 2;
+					score += 10 + NextBall;
+				}
 				else
 				{
-					score += HandleSecondThrow();
+					score += TwoBallsInFrame;
+					ball += 2;
 				}
 			}
 			return score;
@@ -76,25 +82,6 @@ namespace BowlingGame
 		bool Strike()
 		{
 			return throws[ball] == 10;
-		}
-		
-		int HandleSecondThrow()
-		{
-			int score = 0;
-			
-			// Для обработки спэа необходим первый бросок в следующем фрейме.
-			if (Spare())
-			{
-				ball += 2;
-				score += 10 + NextBall;
-			}
-			else
-			{
-				score += TwoBallsInFrame;
-				ball += 2;
-			}
-			
-			return score;
 		}
 		
 		int TwoBallsInFrame { get { return throws[ball] + throws[ball+1]; } }
