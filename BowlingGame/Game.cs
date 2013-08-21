@@ -31,7 +31,9 @@ namespace BowlingGame
 			int score = 0;
 			for (int currentFrame=0; currentFrame<theFrame; currentFrame++)
 			{
-				score += throws[ball++] + throws[ball++];
+				int firstThrow = throws[ball++];
+				int secondThrow = throws[ball++];
+				score += firstThrow + secondThrow;
 			}
 			return score;
 		}
