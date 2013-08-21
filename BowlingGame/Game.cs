@@ -14,11 +14,10 @@ namespace BowlingGame
 	public class Game
 	{
 		bool isFirstThrow = true;
-		int currentFrame = 1;
+		int currentFrame = 0;
 		Scorer scorer = new Scorer();
 		
-		public int Score { get { return ScoreForFrame(CurrentFrame - 1); } }
-		public int CurrentFrame { get { return currentFrame; } }
+		public int Score { get { return ScoreForFrame(currentFrame); } }
 		
 		public void Add(int pins)
 		{
@@ -26,24 +25,18 @@ namespace BowlingGame
 			AdjustCurrentFrame(pins);
 		}
 		
-		public int ScoreForFrame(int theFrame)
-		{
-			return scorer.ScoreForFrame(theFrame);
-		}
+		public int ScoreForFrame(int theFrame) { return scorer.ScoreForFrame(theFrame); }
 		
 		void AdjustCurrentFrame(int pins)
 		{
-			if (isFirstThrow)
-			{
-				if (AdjustFrameForStrike(pins) == false)
-					isFirstThrow = false;
-			}
-			else
-			{
-				isFirstThrow = true;
+			if (LastBallInFrame(pins))
 				AdvanceFrame();
-			}
+			else
+				isFirstThrow = false;
 		}
+		
+		bool LastBallInFrame(int pins) { return Strike(pins) || (!isFirstThrow); }
+		bool Strike(int pins) { return isFirstThrow && pins == 10; }
 		
 		bool AdjustFrameForStrike(int pins)
 		{
@@ -58,7 +51,7 @@ namespace BowlingGame
 		void AdvanceFrame()
 		{
 			currentFrame++;
-			if (currentFrame > 11) currentFrame = 11;
+			if (currentFrame > 10) currentFrame = 10;
 		}
 	}
 }
