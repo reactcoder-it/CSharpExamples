@@ -18,7 +18,7 @@ namespace BowlingGame
 		int currentThrow;
 		
 		public int Score { get { return score; } }
-		public int CurrentFrame { get { return 1; } }
+		public int CurrentFrame { get { return 1 + (currentThrow - 1) / 2; } }
 		
 		public void Add(int pins)
 		{
