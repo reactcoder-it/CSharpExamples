@@ -1,0 +1,6 @@
+C:\Users\VMP\Desktop\NET\CSharpExamples\WorkingWithStrings\bin\Debug\WorkingWithStrings.exe.config
+C:\Users\VMP\Desktop\NET\CSharpExamples\WorkingWithStrings\bin\Debug\WorkingWithStrings.exe
+C:\Users\VMP\Desktop\NET\CSharpExamples\WorkingWithStrings\bin\Debug\WorkingWithStrings.pdb
+C:\Users\VMP\Desktop\NET\CSharpExamples\WorkingWithStrings\obj\Debug\WorkingWithStrings.csprojResolveAssemblyReference.cache
+C:\Users\VMP\Desktop\NET\CSharpExamples\WorkingWithStrings\obj\Debug\WorkingWithStrings.exe
+C:\Users\VMP\Desktop\NET\CSharpExamples\WorkingWithStrings\obj\Debug\WorkingWithStrings.pdb
