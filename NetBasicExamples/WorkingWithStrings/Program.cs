@@ -5,11 +5,19 @@
  * Time: 19:37
  */
 using System;
+using System.Text;
 
 namespace WorkingWithStrings
 {
 	class Program
 	{
+		static void GetEncodings()
+		{
+			Console.WriteLine("--- Get Encodings ---");
+			foreach (EncodingInfo info in Encoding.GetEncodings())
+				Console.WriteLine(info.Name);
+		}
+
 		static void WorkingWithChar()
 		{
 			Console.WriteLine("--- Working with char ---");
@@ -39,6 +47,7 @@ namespace WorkingWithStrings
 			
 			WorkingWithChar();
 			WorkingWithString();
+			GetEncodings();
 			
 			Console.Write("Press any key to continue . . . ");
 			Console.ReadKey(true);
