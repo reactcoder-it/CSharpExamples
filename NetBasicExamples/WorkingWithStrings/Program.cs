@@ -11,6 +11,24 @@ namespace WorkingWithStrings
 {
 	class Program
 	{
+		static void TimeSpanExample()
+		{
+			Console.WriteLine("--- TimeSpan Examples ---");
+			
+			TimeSpan nearlyTenDays = TimeSpan.FromDays(10) - TimeSpan.FromSeconds(1);
+			Console.WriteLine(nearlyTenDays.Days);
+			Console.WriteLine(nearlyTenDays.Hours);
+			Console.WriteLine(nearlyTenDays.Minutes);
+			Console.WriteLine(nearlyTenDays.Seconds);
+			Console.WriteLine(nearlyTenDays.Milliseconds);
+			
+			Console.WriteLine(nearlyTenDays.TotalDays);
+			Console.WriteLine(nearlyTenDays.TotalHours);
+			Console.WriteLine(nearlyTenDays.TotalMinutes);
+			Console.WriteLine(nearlyTenDays.TotalSeconds);
+			Console.WriteLine(nearlyTenDays.TotalMilliseconds);
+		}
+
 		static void GetEncodings()
 		{
 			Console.WriteLine("--- Get Encodings ---");
@@ -48,6 +66,7 @@ namespace WorkingWithStrings
 			WorkingWithChar();
 			WorkingWithString();
 			GetEncodings();
+			TimeSpanExample();
 			
 			Console.Write("Press any key to continue . . . ");
 			Console.ReadKey(true);
