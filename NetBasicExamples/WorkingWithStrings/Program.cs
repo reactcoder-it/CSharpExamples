@@ -5,12 +5,21 @@
  * Time: 19:37
  */
 using System;
+using System.Globalization;
 using System.Text;
 
 namespace WorkingWithStrings
 {
 	class Program
 	{
+		static void DateTimeExample()
+		{
+			Console.WriteLine("--- DateTime Examples ---");
+			
+			DateTime d = new DateTime(5767, 1, 1, new HebrewCalendar());
+			Console.WriteLine(d);
+		}
+
 		static void TimeSpanExample()
 		{
 			Console.WriteLine("--- TimeSpan Examples ---");
@@ -67,6 +76,7 @@ namespace WorkingWithStrings
 			WorkingWithString();
 			GetEncodings();
 			TimeSpanExample();
+			DateTimeExample();
 			
 			Console.Write("Press any key to continue . . . ");
 			Console.ReadKey(true);
