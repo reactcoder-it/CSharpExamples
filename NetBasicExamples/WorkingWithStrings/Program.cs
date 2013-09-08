@@ -12,6 +12,22 @@ namespace WorkingWithStrings
 {
 	class Program
 	{
+		static void DateTimeOffsetExample()
+		{
+			Console.WriteLine("--- DateTime Examples ---");
+			
+			DateTimeOffset d = new DateTime(2000, 2, 3);
+			Console.WriteLine(d);
+			
+			Console.WriteLine(DateTime.Now);
+			Console.WriteLine(DateTimeOffset.Now);
+			
+			Console.WriteLine(DateTime.Today);
+			
+			Console.WriteLine(DateTime.UtcNow);
+			Console.WriteLine(DateTimeOffset.UtcNow);
+		}
+
 		static void DateTimeExample()
 		{
 			Console.WriteLine("--- DateTime Examples ---");
@@ -77,6 +93,7 @@ namespace WorkingWithStrings
 			GetEncodings();
 			TimeSpanExample();
 			DateTimeExample();
+			DateTimeOffsetExample();
 			
 			Console.Write("Press any key to continue . . . ");
 			Console.ReadKey(true);
